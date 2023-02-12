@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Belleza&family=Montserrat:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  header {
+    width: 100%;
+    padding: 1em;
+    height: fit-content;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 4px lightgrey;
+
+    .header_wrapper {
+      display: flex;
+
+      .menu_wrapper {
+        width: 30%;
+        display: flex;
+        align-items: center;
+
+        .menu {
+          display: flex;
+          gap: 3em;
+
+          li {
+            list-style-type: none;
+
+            a {
+              text-decoration: none;
+              color: #282828;
+              font-weight: 600;
+              transition: color 0.2s linear;
+
+              &:hover {
+                color: lightgrey;
+              }
+            }
+
+            &.current_page_item {
+              a {
+                color: lightgrey;
+              }
+            }
+          }
+        }
+      }
+
+      .logo-social_wrapper {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+
+        .logo_link {
+          display: flex;
+          justify-content: center;
+
+          img {
+            width: 40%;
+          }
+        }
+
+        .social_header {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1em;
+
+          a {
+            text-decoration: none;
+            transition: transform 0.4s ease;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+
+          .dashicons-instagram {
+            color: darkred;
+          }
+
+          .dashicons-facebook {
+            color: blue;
+          }
+
+          .dashicons-twitter {
+            color: lightblue;
+          }
+
+          .dashicons-youtube {
+            color: red;
+          }
+        }
+      }
+
+      .util_wrapper {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+
+        .dashicons-search {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+
+    .hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../assets/hero.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .heading {
+        margin-top: -5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h4 {
+          font-size: 1.8rem;
+          color: whitesmoke;
+          margin-bottom: -1em;
+          font-family: 'Belleza', sans-serif;
+        }
+
+        h1 {
+          font-size: 5.5rem;
+          color: whitesmoke;
+          font-family: 'Belleza', sans-serif;
+          letter-spacing: 8px;
+        }
+
+        a {
+          border: 0;
+          border-radius: 5px;
+          padding: 1em 2em;
+          font-weight: bold;
+          font-size: 1.25rem;
+          font-family: 'Belleza', sans-serif;
+          background-color: lightgray;
+          text-decoration: none;
+          color: #282828;
+          transition: background-color 0.4s ease;
+
+          &:hover {
+            cursor: pointer;
+            background-color: white;
+          }
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3em;
+
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      hr {
+        width: 30%;
+        color: black;
+      }
+
+      .social_images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+        margin-bottom: 8em;
+
+        img {
+          width: 25%;
+        }
+      }
+    }
+  }
+
+  footer {
+    margin-top: auto;
+    background-color: #1b1212;
+    width: 100%;
+    height: fit-content;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    box-shadow: 0 -4px 4px black;
+
+    .logo-social_wrapper_footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1em 7em;
+
+      .logo_link {
+        img {
+          width: 30%;
+        }
+      }
+
+      .social_footer {
+        display: flex;
+        gap: 1.5em;
+
+        a {
+          text-decoration: none;
+          transition: transform 0.4s ease;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        .dashicons-instagram {
+          color: darkred;
+          font-size: 2rem;
+        }
+
+        .dashicons-facebook {
+          color: blue;
+          font-size: 2rem;
+        }
+
+        .dashicons-twitter {
+          color: lightblue;
+          font-size: 2rem;
+        }
+
+        .dashicons-youtube {
+          color: red;
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .copyright_wrapper {
+      display: flex;
+      gap: 5em;
+      justify-content: space-between;
+
+      span {
+        color: gray;
+      }
+    }
+  }
+}

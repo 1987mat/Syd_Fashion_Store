@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Belleza&family=Montserrat:wght@400;600&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body header {
+  width: 100%;
+  padding: 1em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: whitesmoke;
+  box-shadow: 0 4px 4px lightgrey;
+}
+body header .header_wrapper {
+  display: flex;
+}
+body header .header_wrapper .menu_wrapper {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+body header .header_wrapper .menu_wrapper .menu {
+  display: flex;
+  gap: 3em;
+}
+body header .header_wrapper .menu_wrapper .menu li {
+  list-style-type: none;
+}
+body header .header_wrapper .menu_wrapper .menu li a {
+  text-decoration: none;
+  color: #282828;
+  font-weight: 600;
+  transition: color 0.2s linear;
+}
+body header .header_wrapper .menu_wrapper .menu li a:hover {
+  color: lightgrey;
+}
+body header .header_wrapper .menu_wrapper .menu li.current_page_item a {
+  color: lightgrey;
+}
+body header .header_wrapper .logo-social_wrapper {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+body header .header_wrapper .logo-social_wrapper .logo_link {
+  display: flex;
+  justify-content: center;
+}
+body header .header_wrapper .logo-social_wrapper .logo_link img {
+  width: 40%;
+}
+body header .header_wrapper .logo-social_wrapper .social_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+body header .header_wrapper .logo-social_wrapper .social_header a {
+  text-decoration: none;
+  transition: transform 0.4s ease;
+}
+body header .header_wrapper .logo-social_wrapper .social_header a:hover {
+  transform: scale(1.1);
+}
+body header .header_wrapper .logo-social_wrapper .social_header .dashicons-instagram {
+  color: darkred;
+}
+body header .header_wrapper .logo-social_wrapper .social_header .dashicons-facebook {
+  color: blue;
+}
+body header .header_wrapper .logo-social_wrapper .social_header .dashicons-twitter {
+  color: lightblue;
+}
+body header .header_wrapper .logo-social_wrapper .social_header .dashicons-youtube {
+  color: red;
+}
+body header .header_wrapper .util_wrapper {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+body header .header_wrapper .util_wrapper .dashicons-search {
+  font-size: 1.5rem;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+}
+body main .hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .hero .heading {
+  margin-top: -5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .hero .heading h4 {
+  font-size: 1.8rem;
+  color: whitesmoke;
+  margin-bottom: -1em;
+  font-family: "Belleza", sans-serif;
+}
+body main .hero .heading h1 {
+  font-size: 5.5rem;
+  color: whitesmoke;
+  font-family: "Belleza", sans-serif;
+  letter-spacing: 8px;
+}
+body main .hero .heading a {
+  border: 0;
+  border-radius: 5px;
+  padding: 1em 2em;
+  font-weight: bold;
+  font-size: 1.25rem;
+  font-family: "Belleza", sans-serif;
+  background-color: lightgray;
+  text-decoration: none;
+  color: #282828;
+  transition: background-color 0.4s ease;
+}
+body main .hero .heading a:hover {
+  cursor: pointer;
+  background-color: white;
+}
+body main .social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+body main .social h2 {
+  font-size: 2.5rem;
+}
+body main .social hr {
+  width: 30%;
+  color: black;
+}
+body main .social .social_images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  margin-bottom: 8em;
+}
+body main .social .social_images img {
+  width: 25%;
+}
+body footer {
+  margin-top: auto;
+  background-color: #1b1212;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+  box-shadow: 0 -4px 4px black;
+}
+body footer .logo-social_wrapper_footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 7em;
+}
+body footer .logo-social_wrapper_footer .logo_link img {
+  width: 30%;
+}
+body footer .logo-social_wrapper_footer .social_footer {
+  display: flex;
+  gap: 1.5em;
+}
+body footer .logo-social_wrapper_footer .social_footer a {
+  text-decoration: none;
+  transition: transform 0.4s ease;
+}
+body footer .logo-social_wrapper_footer .social_footer a:hover {
+  transform: scale(1.1);
+}
+body footer .logo-social_wrapper_footer .social_footer .dashicons-instagram {
+  color: darkred;
+  font-size: 2rem;
+}
+body footer .logo-social_wrapper_footer .social_footer .dashicons-facebook {
+  color: blue;
+  font-size: 2rem;
+}
+body footer .logo-social_wrapper_footer .social_footer .dashicons-twitter {
+  color: lightblue;
+  font-size: 2rem;
+}
+body footer .logo-social_wrapper_footer .social_footer .dashicons-youtube {
+  color: red;
+  font-size: 2rem;
+}
+body footer .copyright_wrapper {
+  display: flex;
+  gap: 5em;
+  justify-content: space-between;
+}
+body footer .copyright_wrapper span {
+  color: gray;
+}/*# sourceMappingURL=style.css.map */
