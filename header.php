@@ -27,7 +27,6 @@
       </div>
       <div class="util_wrapper">
         <span class="dashicons dashicons-search"></span>
-        <span class="dashicons dashicons-cart"></span>      
       </div>
     </div>
   </header>

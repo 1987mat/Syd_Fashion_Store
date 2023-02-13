@@ -11,7 +11,11 @@
     </div>
   </section>
   </div>
-  <section class="product-slider">slider here</section>
+  <section class="product-slider">
+    <h2>FIND YOUR STYLE</h2>
+    <hr>
+    slider here
+  </section>
   <section class="social">
     <h2>JOIN THE COMMUNITY</h2>
     <hr>

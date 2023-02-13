@@ -25,3 +25,51 @@
   }
   
   add_action( 'init', 'register_my_menus' );
+
+
+function add_search_modal() {
+	echo 
+  "<div class='search_wrapper'>
+    <div class='search_input_field'>
+      <input type='text' placeholder='Search...' class='search-input'>
+      <span class='close-icon'>&#10006;</span>
+    </div>
+  </div>";
+}
+
+// Add a hidden search modal 
+add_action( 'wp_footer', 'add_search_modal' );
+
+
+function register_search() {
+  register_rest_route('store/v1', '/search', [
+    'methods'  => WP_REST_SERVER::READABLE,
+    'callback' => 'search_results'
+  ]);
+}
+
+function search_results( $data ) {
+  $mainQuery = new WP_Query(array(
+    'posts_per_page' => 10,
+    'post_type' => 'product',
+    'post_status' => 'publish',
+    's' => sanitize_text_field($data['term'])
+  ));
+
+  $results = array();
+
+  while ($mainQuery->have_posts()) {
+    $mainQuery->the_post();
+
+    array_push($results, array(
+      'title' => get_the_title(),
+      'url' => get_the_permalink(),
+      'image' => get_the_post_thumbnail_url(0, 'landscape'),
+      'price' => get_post_meta( get_the_ID(), '_regular_price', true)
+    ));
+  }
+
+  return $results;
+}
+
+add_action('rest_api_init', 'register_search');
