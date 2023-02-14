@@ -49,7 +49,11 @@ class Search {
     this.searchModal.classList.remove('show');
     this.searchInput.value = '';
   }
-  displayResults() {}
+  displayResults() {
+    fetch(siteData.root_url + '/wp-json/store/v1/search?term=' + this.searchInput.value).then(response => response.json()).then(results => {
+      console.log(results);
+    });
+  }
 }
 
 /***/ }),

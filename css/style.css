@@ -199,6 +199,56 @@ body main .social .social_images {
 body main .social .social_images img {
   width: 25%;
 }
+body.woocommerce-shop .woocommerce {
+  width: 80vw;
+  padding: 5em 1em;
+}
+body.woocommerce-shop .woocommerce li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body.woocommerce-shop .woocommerce li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body.woocommerce-shop .woocommerce li a h2 {
+  color: #282828;
+}
+body.woocommerce-shop .woocommerce li a span {
+  color: gray;
+}
+body.woocommerce-shop .woocommerce li a img:hover {
+  opacity: 0.9;
+}
+body.woocommerce-account .woocommerce {
+  padding: 6em 1em;
+  display: flex;
+  gap: 3em;
+  width: 100vw;
+}
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation li {
+  list-style-type: none;
+  background-color: whitesmoke;
+  border-radius: 2px;
+  padding: 0.8em;
+  margin-top: 0.1em;
+}
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation li:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation li.is-active {
+  background-color: lightgray;
+}
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation li a {
+  text-decoration: none;
+  color: #282828;
+  font-weight: bold;
+}
 body footer {
   margin-top: auto;
   background-color: #1b1212;

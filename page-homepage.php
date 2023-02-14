@@ -14,7 +14,7 @@
   <section class="product-slider">
     <h2>FIND YOUR STYLE</h2>
     <hr>
-    slider here
+    <h2>Slider</h2>
   </section>
   <section class="social">
     <h2>JOIN THE COMMUNITY</h2>
