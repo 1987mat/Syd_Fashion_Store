@@ -1,0 +1,52 @@
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .heading {
+    margin-top: -5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h4 {
+      font-size: 1.8rem;
+      color: whitesmoke;
+      margin-bottom: -1em;
+      font-family: 'Belleza', sans-serif;
+    }
+
+    h1 {
+      font-size: 5.5rem;
+      color: whitesmoke;
+      font-family: 'Belleza', sans-serif;
+      letter-spacing: 8px;
+    }
+
+    a {
+      border: 0;
+      border-radius: 5px;
+      padding: 1em 2em;
+      font-weight: bold;
+      font-size: 1.25rem;
+      font-family: 'Belleza', sans-serif;
+      background-color: lightgray;
+      text-decoration: none;
+      color: #282828;
+      transition: background-color 0.4s ease;
+
+      &:hover {
+        cursor: pointer;
+        background-color: white;
+      }
+    }
+  }
+}

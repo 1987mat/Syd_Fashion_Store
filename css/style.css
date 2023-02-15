@@ -14,51 +14,49 @@ body {
   justify-content: center;
   align-items: center;
 }
-body header {
+body .site_header {
   width: 100%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 1em;
   background-color: whitesmoke;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 10;
   box-shadow: 0 10px 10px -10px gray;
   transition: top 0.8s ease;
 }
-body header.hide {
+body .site_header.hide {
   top: -200px;
 }
-body header .header_wrapper {
+body .site_header .header_wrapper {
   display: flex;
 }
-body header .header_wrapper .menu_wrapper {
+body .site_header .header_wrapper .menu_wrapper {
   width: 30%;
   display: flex;
   align-items: center;
 }
-body header .header_wrapper .menu_wrapper .menu {
+body .site_header .header_wrapper .menu_wrapper .menu {
   display: flex;
   gap: 3em;
 }
-body header .header_wrapper .menu_wrapper .menu li {
+body .site_header .header_wrapper .menu_wrapper .menu li {
   list-style-type: none;
 }
-body header .header_wrapper .menu_wrapper .menu li a {
+body .site_header .header_wrapper .menu_wrapper .menu li a {
   text-decoration: none;
   color: #282828;
   font-weight: 600;
   transition: color 0.2s linear;
 }
-body header .header_wrapper .menu_wrapper .menu li a:hover {
+body .site_header .header_wrapper .menu_wrapper .menu li a:hover {
   color: lightgrey;
 }
-body header .header_wrapper .menu_wrapper .menu li.current_page_item a {
+body .site_header .header_wrapper .menu_wrapper .menu li.current_page_item a {
   color: lightgrey;
 }
-body header .header_wrapper .logo-social_wrapper {
+body .site_header .header_wrapper .logo-social_wrapper {
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -66,48 +64,48 @@ body header .header_wrapper .logo-social_wrapper {
   align-items: center;
   gap: 0.5em;
 }
-body header .header_wrapper .logo-social_wrapper .logo_link {
+body .site_header .header_wrapper .logo-social_wrapper .logo_link {
   display: flex;
   justify-content: center;
 }
-body header .header_wrapper .logo-social_wrapper .logo_link img {
+body .site_header .header_wrapper .logo-social_wrapper .logo_link img {
   width: 40%;
 }
-body header .header_wrapper .logo-social_wrapper .social_header {
+body .site_header .header_wrapper .logo-social_wrapper .social_header {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1em;
 }
-body header .header_wrapper .logo-social_wrapper .social_header a {
+body .site_header .header_wrapper .logo-social_wrapper .social_header a {
   text-decoration: none;
   transition: transform 0.4s ease;
 }
-body header .header_wrapper .logo-social_wrapper .social_header a:hover {
+body .site_header .header_wrapper .logo-social_wrapper .social_header a:hover {
   transform: scale(1.1);
 }
-body header .header_wrapper .logo-social_wrapper .social_header .dashicons-instagram {
+body .site_header .header_wrapper .logo-social_wrapper .social_header .dashicons-instagram {
   color: darkred;
 }
-body header .header_wrapper .logo-social_wrapper .social_header .dashicons-facebook {
+body .site_header .header_wrapper .logo-social_wrapper .social_header .dashicons-facebook {
   color: blue;
 }
-body header .header_wrapper .logo-social_wrapper .social_header .dashicons-twitter {
+body .site_header .header_wrapper .logo-social_wrapper .social_header .dashicons-twitter {
   color: lightblue;
 }
-body header .header_wrapper .logo-social_wrapper .social_header .dashicons-youtube {
+body .site_header .header_wrapper .logo-social_wrapper .social_header .dashicons-youtube {
   color: red;
 }
-body header .header_wrapper .util_wrapper {
+body .site_header .header_wrapper .util_wrapper {
   width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body header .header_wrapper .util_wrapper .dashicons-search {
+body .site_header .header_wrapper .util_wrapper .dashicons-search {
   font-size: 1.5rem;
 }
-body header .header_wrapper .util_wrapper .dashicons-search:hover {
+body .site_header .header_wrapper .util_wrapper .dashicons-search:hover {
   cursor: pointer;
 }
 body main {
@@ -253,7 +251,6 @@ body footer {
   margin-top: auto;
   background-color: #1b1212;
   width: 100%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 1em;
@@ -307,6 +304,14 @@ body footer .copyright_wrapper {
 }
 body footer .copyright_wrapper span {
   color: gray;
+}
+body footer .copyright_wrapper span a {
+  color: gray;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+body footer .copyright_wrapper span a:hover {
+  color: lightgray;
 }
 body .search_wrapper {
   display: flex;

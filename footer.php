@@ -10,8 +10,8 @@
       </div>
       <div class="copyright_wrapper">
         <span>Copyright © 2023 Glamour Icon. All Rights Reserved.</span>
-        <span>Privacy Policy</span>
-        <span>Refunds and Returns Policy</span>
+        <span><a href="<?php echo site_url('/privacy-policy'); ?>">Privacy Policy</a></span>
+        <span><a href="<?php echo site_url('/refund_returns'); ?>">Refunds and Returns Policy</a></span>
       </div>
     </footer>
   <?php wp_footer();?>

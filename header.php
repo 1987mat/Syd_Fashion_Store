@@ -8,7 +8,7 @@
   <?php wp_head();?>
 </head>
 <body <?php body_class();?>>
-  <header>
+  <header class="site_header">
     <div class="header_wrapper">
       <div class="menu_wrapper">
         <?php 
