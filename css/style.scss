@@ -6,9 +6,10 @@
 }
 
 body {
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,6 +17,10 @@ body {
   align-items: center;
 
   @import 'components/header';
+
+  a {
+    color: #282828;
+  }
 
   main {
     display: flex;
@@ -38,6 +43,103 @@ body {
       hr {
         width: 30%;
         color: black;
+      }
+
+      .carousel-container {
+        position: relative;
+        display: flex;
+        gap: 2em;
+        margin: 4em 0;
+
+        button {
+          position: absolute;
+          background-color: whitesmoke;
+          transition: background-color 0.4s ease;
+          border-radius: 50%;
+          padding: 1em;
+          border: none;
+          z-index: 1;
+          box-shadow: 0 0 5px gray;
+
+          &:hover {
+            cursor: pointer;
+            background-color: white;
+          }
+
+          &.prev-btn {
+            left: 0;
+            top: 50%;
+          }
+
+          &.next-btn {
+            right: 0;
+            top: 50%;
+          }
+        }
+
+        .carousel-wrapper {
+          position: relative;
+          width: 100%;
+          gap: 1em;
+          max-width: 95vw;
+          display: flex;
+          justify-content: center;
+
+          ul {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            scroll-behavior: smooth;
+            gap: 0.5em;
+            padding: 1em 0;
+            margin: 0;
+
+            li {
+              list-style-type: none;
+              flex: 0 0 auto;
+              scroll-snap-align: start;
+              width: 50%;
+
+              .product-card {
+                border: 0.5px solid gray;
+                border-radius: 2px;
+                padding: 1em;
+                display: flex;
+                text-decoration: none;
+                gap: 3em;
+                transition: transform 0.4s ease;
+
+                &:hover {
+                  transform: scale(1.01);
+                }
+
+                .product-image {
+                  box-shadow: 0 0 6px black;
+                  border-radius: 2px;
+                  opacity: 1;
+                  transition: opacity 0.4s ease;
+
+                  &:hover {
+                    opacity: 0.9;
+                  }
+                }
+
+                .product-info {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  width: 100%;
+
+                  .price-wrapper {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
 
@@ -65,7 +167,7 @@ body {
         margin-bottom: 8em;
 
         img {
-          width: 25%;
+          width: 20em;
         }
       }
     }
@@ -97,14 +199,20 @@ body {
             color: gray;
           }
 
-          img:hover {
-            opacity: 0.9;
+          img {
+            opacity: 1;
+            transition: opacity 0.4s ease;
+
+            &:hover {
+              opacity: 0.8;
+            }
           }
         }
       }
     }
   }
 
+  /* My Account Page */
   &.woocommerce-account {
     .woocommerce {
       padding: 6em 1em;
@@ -113,28 +221,42 @@ body {
       width: 100vw;
 
       .woocommerce-MyAccount-navigation {
-        li {
-          list-style-type: none;
-          background-color: whitesmoke;
-          border-radius: 2px;
-          padding: 0.8em;
-          margin-top: 0.1em;
+        ul {
+          padding: 0;
+          margin: 0;
 
-          &:hover {
-            background-color: lightgray;
-            cursor: pointer;
-          }
+          li {
+            list-style-type: none;
+            background-color: whitesmoke;
+            border-radius: 2px;
+            padding: 0.8em;
+            margin-top: 0.1em;
 
-          &.is-active {
-            background-color: lightgray;
-          }
+            &:hover {
+              background-color: lightgray;
+              cursor: pointer;
+            }
 
-          a {
-            text-decoration: none;
-            color: #282828;
-            font-weight: bold;
+            &.is-active {
+              background-color: lightgray;
+            }
+
+            a {
+              text-decoration: none;
+              color: #282828;
+              font-weight: bold;
+            }
           }
         }
+      }
+
+      .woocommerce-MyAccount-content {
+        background-color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        padding: 1.5em;
+        border-radius: 2px;
+        box-shadow: 0 0 6px gray;
       }
     }
   }

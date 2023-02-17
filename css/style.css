@@ -5,17 +5,19 @@
 }
 
 body {
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* My Account Page */
 }
 body .site_header {
-  width: 100%;
+  width: 100vw;
   height: -moz-fit-content;
   height: fit-content;
   padding: 1em;
@@ -108,17 +110,20 @@ body .site_header .header_wrapper .util_wrapper .dashicons-search {
 body .site_header .header_wrapper .util_wrapper .dashicons-search:hover {
   cursor: pointer;
 }
+body a {
+  color: #282828;
+}
 body main {
   display: flex;
   flex-direction: column;
 }
 body main .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/hero.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,6 +178,89 @@ body main .product-slider hr {
   width: 30%;
   color: black;
 }
+body main .product-slider .carousel-container {
+  position: relative;
+  display: flex;
+  gap: 2em;
+  margin: 4em 0;
+}
+body main .product-slider .carousel-container button {
+  position: absolute;
+  background-color: whitesmoke;
+  transition: background-color 0.4s ease;
+  border-radius: 50%;
+  padding: 1em;
+  border: none;
+  z-index: 1;
+  box-shadow: 0 0 5px gray;
+}
+body main .product-slider .carousel-container button:hover {
+  cursor: pointer;
+  background-color: white;
+}
+body main .product-slider .carousel-container button.prev-btn {
+  left: 0;
+  top: 50%;
+}
+body main .product-slider .carousel-container button.next-btn {
+  right: 0;
+  top: 50%;
+}
+body main .product-slider .carousel-container .carousel-wrapper {
+  position: relative;
+  width: 100%;
+  gap: 1em;
+  max-width: 95vw;
+  display: flex;
+  justify-content: center;
+}
+body main .product-slider .carousel-container .carousel-wrapper ul {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  gap: 0.5em;
+  padding: 1em 0;
+  margin: 0;
+}
+body main .product-slider .carousel-container .carousel-wrapper ul li {
+  list-style-type: none;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 50%;
+}
+body main .product-slider .carousel-container .carousel-wrapper ul li .product-card {
+  border: 0.5px solid gray;
+  border-radius: 2px;
+  padding: 1em;
+  display: flex;
+  text-decoration: none;
+  gap: 3em;
+  transition: transform 0.4s ease;
+}
+body main .product-slider .carousel-container .carousel-wrapper ul li .product-card:hover {
+  transform: scale(1.01);
+}
+body main .product-slider .carousel-container .carousel-wrapper ul li .product-card .product-image {
+  box-shadow: 0 0 6px black;
+  border-radius: 2px;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+body main .product-slider .carousel-container .carousel-wrapper ul li .product-card .product-image:hover {
+  opacity: 0.9;
+}
+body main .product-slider .carousel-container .carousel-wrapper ul li .product-card .product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+body main .product-slider .carousel-container .carousel-wrapper ul li .product-card .product-info .price-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
 body main .social {
   display: flex;
   flex-direction: column;
@@ -195,7 +283,7 @@ body main .social .social_images {
   margin-bottom: 8em;
 }
 body main .social .social_images img {
-  width: 25%;
+  width: 20em;
 }
 body.woocommerce-shop .woocommerce {
   width: 80vw;
@@ -219,8 +307,12 @@ body.woocommerce-shop .woocommerce li a h2 {
 body.woocommerce-shop .woocommerce li a span {
   color: gray;
 }
+body.woocommerce-shop .woocommerce li a img {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
 body.woocommerce-shop .woocommerce li a img:hover {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 body.woocommerce-account .woocommerce {
   padding: 6em 1em;
@@ -228,24 +320,36 @@ body.woocommerce-account .woocommerce {
   gap: 3em;
   width: 100vw;
 }
-body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation li {
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul {
+  padding: 0;
+  margin: 0;
+}
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li {
   list-style-type: none;
   background-color: whitesmoke;
   border-radius: 2px;
   padding: 0.8em;
   margin-top: 0.1em;
 }
-body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation li:hover {
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li:hover {
   background-color: lightgray;
   cursor: pointer;
 }
-body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation li.is-active {
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li.is-active {
   background-color: lightgray;
 }
-body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation li a {
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li a {
   text-decoration: none;
   color: #282828;
   font-weight: bold;
+}
+body.woocommerce-account .woocommerce .woocommerce-MyAccount-content {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+  border-radius: 2px;
+  box-shadow: 0 0 6px gray;
 }
 body footer {
   margin-top: auto;

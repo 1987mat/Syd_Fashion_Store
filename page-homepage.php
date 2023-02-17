@@ -14,15 +14,50 @@
   <section class="product-slider">
     <h2>FIND YOUR STYLE</h2>
     <hr>
-    <h2>Slider</h2>
+    <div class="carousel-container">
+      <button class="prev-btn"><span class="dashicons dashicons-arrow-left-alt2"></span></button>
+      <button class="next-btn"><span class="dashicons dashicons-arrow-right-alt2"></span></button>
+      <div class="carousel-wrapper">
+        <ul>
+      <?php 
+    
+      $productQuery = new WP_Query(array(
+          'posts_per_page' => 10,
+          'post_type' => 'product',
+          'order' => 'ASC'
+      ));
+
+      while ($productQuery->have_posts()) {
+        $productQuery->the_post();
+
+        ?>
+        <li>
+          <a href=<?php echo the_permalink(); ?> class="product-card">
+            <?php echo the_post_thumbnail('medium', [ 'class' => 'product-image' ]);?>
+            <div class="product-info">
+              <h3><?php echo the_title(); ?></h3>
+              <div class="price-wrapper">
+                <span>$<?php echo get_post_meta( get_the_ID(), '_regular_price', true); ?></span>
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <?php
+  
+      }
+      ?>
+      </ul>
+      </div>
+    </div>
   </section>
   <section class="social">
     <h2>JOIN THE COMMUNITY</h2>
     <hr>
     <div class="social_images">
-      <img src=<?php echo get_template_directory_uri() . '/assets/feed1.jpg';?> alt="feed1">
-      <img src=<?php echo get_template_directory_uri() . '/assets/feed2.jpg';?> alt="feed2">
-      <img src=<?php echo get_template_directory_uri() . '/assets/feed3.jpg';?> alt="feed3">
+      <img src=<?php echo get_template_directory_uri() . '/images/feed1.jpg';?> alt="feed1">
+      <img src=<?php echo get_template_directory_uri() . '/images/feed2.jpg';?> alt="feed2">
+      <img src=<?php echo get_template_directory_uri() . '/images/feed3.jpg';?> alt="feed3">
     </div>
   </section>
 </main>
