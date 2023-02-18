@@ -67,12 +67,12 @@ body {
           }
 
           &.prev-btn {
-            left: 0;
+            left: -10px;
             top: 50%;
           }
 
           &.next-btn {
-            right: 0;
+            right: -10px;
             top: 50%;
           }
         }
@@ -85,20 +85,18 @@ body {
           display: flex;
           justify-content: center;
 
-          ul {
+          .slider {
             display: flex;
-            flex-wrap: nowrap;
             overflow: hidden;
-            scroll-behavior: smooth;
-            gap: 0.5em;
+            gap: 1em;
             padding: 1em 0;
             margin: 0;
 
-            li {
+            .product-slide {
               list-style-type: none;
               flex: 0 0 auto;
-              scroll-snap-align: start;
               width: 50%;
+              transition: transform 0.4s ease;
 
               .product-card {
                 border: 0.5px solid gray;
@@ -175,36 +173,39 @@ body {
 
   // Shop
   &.woocommerce-shop {
-    .woocommerce {
-      width: 80vw;
-      padding: 5em 1em;
+    .shop-container {
+      padding: 3em;
 
-      li {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      .woocommerce {
+        padding: 4em 1em;
 
-        a {
+        li {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
 
-          h2 {
-            color: #282828;
-          }
+          a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
-          span {
-            color: gray;
-          }
+            h2 {
+              color: #282828;
+            }
 
-          img {
-            opacity: 1;
-            transition: opacity 0.4s ease;
+            span {
+              color: gray;
+            }
 
-            &:hover {
-              opacity: 0.8;
+            img {
+              opacity: 1;
+              transition: opacity 0.4s ease;
+
+              &:hover {
+                opacity: 0.8;
+              }
             }
           }
         }

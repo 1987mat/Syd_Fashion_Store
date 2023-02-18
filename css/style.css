@@ -199,11 +199,11 @@ body main .product-slider .carousel-container button:hover {
   background-color: white;
 }
 body main .product-slider .carousel-container button.prev-btn {
-  left: 0;
+  left: -10px;
   top: 50%;
 }
 body main .product-slider .carousel-container button.next-btn {
-  right: 0;
+  right: -10px;
   top: 50%;
 }
 body main .product-slider .carousel-container .carousel-wrapper {
@@ -214,22 +214,20 @@ body main .product-slider .carousel-container .carousel-wrapper {
   display: flex;
   justify-content: center;
 }
-body main .product-slider .carousel-container .carousel-wrapper ul {
+body main .product-slider .carousel-container .carousel-wrapper .slider {
   display: flex;
-  flex-wrap: nowrap;
   overflow: hidden;
-  scroll-behavior: smooth;
-  gap: 0.5em;
+  gap: 1em;
   padding: 1em 0;
   margin: 0;
 }
-body main .product-slider .carousel-container .carousel-wrapper ul li {
+body main .product-slider .carousel-container .carousel-wrapper .slider .product-slide {
   list-style-type: none;
   flex: 0 0 auto;
-  scroll-snap-align: start;
   width: 50%;
+  transition: transform 0.4s ease;
 }
-body main .product-slider .carousel-container .carousel-wrapper ul li .product-card {
+body main .product-slider .carousel-container .carousel-wrapper .slider .product-slide .product-card {
   border: 0.5px solid gray;
   border-radius: 2px;
   padding: 1em;
@@ -238,25 +236,25 @@ body main .product-slider .carousel-container .carousel-wrapper ul li .product-c
   gap: 3em;
   transition: transform 0.4s ease;
 }
-body main .product-slider .carousel-container .carousel-wrapper ul li .product-card:hover {
+body main .product-slider .carousel-container .carousel-wrapper .slider .product-slide .product-card:hover {
   transform: scale(1.01);
 }
-body main .product-slider .carousel-container .carousel-wrapper ul li .product-card .product-image {
+body main .product-slider .carousel-container .carousel-wrapper .slider .product-slide .product-card .product-image {
   box-shadow: 0 0 6px black;
   border-radius: 2px;
   opacity: 1;
   transition: opacity 0.4s ease;
 }
-body main .product-slider .carousel-container .carousel-wrapper ul li .product-card .product-image:hover {
+body main .product-slider .carousel-container .carousel-wrapper .slider .product-slide .product-card .product-image:hover {
   opacity: 0.9;
 }
-body main .product-slider .carousel-container .carousel-wrapper ul li .product-card .product-info {
+body main .product-slider .carousel-container .carousel-wrapper .slider .product-slide .product-card .product-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
 }
-body main .product-slider .carousel-container .carousel-wrapper ul li .product-card .product-info .price-wrapper {
+body main .product-slider .carousel-container .carousel-wrapper .slider .product-slide .product-card .product-info .price-wrapper {
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -285,33 +283,35 @@ body main .social .social_images {
 body main .social .social_images img {
   width: 20em;
 }
-body.woocommerce-shop .woocommerce {
-  width: 80vw;
-  padding: 5em 1em;
+body.woocommerce-shop .shop-container {
+  padding: 3em;
 }
-body.woocommerce-shop .woocommerce li {
+body.woocommerce-shop .shop-container .woocommerce {
+  padding: 4em 1em;
+}
+body.woocommerce-shop .shop-container .woocommerce li {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-body.woocommerce-shop .woocommerce li a {
+body.woocommerce-shop .shop-container .woocommerce li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-body.woocommerce-shop .woocommerce li a h2 {
+body.woocommerce-shop .shop-container .woocommerce li a h2 {
   color: #282828;
 }
-body.woocommerce-shop .woocommerce li a span {
+body.woocommerce-shop .shop-container .woocommerce li a span {
   color: gray;
 }
-body.woocommerce-shop .woocommerce li a img {
+body.woocommerce-shop .shop-container .woocommerce li a img {
   opacity: 1;
   transition: opacity 0.4s ease;
 }
-body.woocommerce-shop .woocommerce li a img:hover {
+body.woocommerce-shop .shop-container .woocommerce li a img:hover {
   opacity: 0.8;
 }
 body.woocommerce-account .woocommerce {

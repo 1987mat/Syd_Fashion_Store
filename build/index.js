@@ -2,6 +2,49 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/modules/Carousel.js":
+/*!*********************************!*\
+  !*** ./src/modules/Carousel.js ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+class Slider {
+  constructor() {
+    this.slides = document.querySelectorAll('.product-slide');
+    this.events();
+  }
+  events() {
+    let curSlide = 0;
+    let maxSlide = this.slides.length - 1;
+    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.querySelector('.prev-btn');
+    nextBtn.addEventListener('click', () => {
+      if (curSlide === maxSlide) {
+        curSlide = 0;
+      } else {
+        curSlide++;
+      }
+      this.slides.forEach(slide => {
+        slide.style.transform = `translateX(${100 * -curSlide}%)`;
+      });
+    });
+    prevBtn.addEventListener('click', () => {
+      if (curSlide === 0) {
+        curSlide = maxSlide;
+      } else {
+        curSlide--;
+      }
+      this.slides.forEach(slide => {
+        slide.style.transform = `translateX(${-100 * curSlide}%)`;
+      });
+    });
+  }
+}
+/* harmony default export */ __webpack_exports__["default"] = (Slider);
+
+/***/ }),
+
 /***/ "./src/modules/Search.js":
 /*!*******************************!*\
   !*** ./src/modules/Search.js ***!
@@ -152,9 +195,12 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_navbarScroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/navbarScroll */ "./src/modules/navbarScroll.js");
 /* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Search */ "./src/modules/Search.js");
+/* harmony import */ var _modules_Carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/Carousel */ "./src/modules/Carousel.js");
+
 
 
 const search = new _modules_Search__WEBPACK_IMPORTED_MODULE_1__.Search();
+const slider = new _modules_Carousel__WEBPACK_IMPORTED_MODULE_2__["default"]();
 (0,_modules_navbarScroll__WEBPACK_IMPORTED_MODULE_0__.hideNavbar)();
 }();
 /******/ })()
