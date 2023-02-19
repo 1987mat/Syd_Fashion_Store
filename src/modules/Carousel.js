@@ -1,7 +1,9 @@
 class Slider {
   constructor() {
-    this.slides = document.querySelectorAll('.product-slide');
-    this.events();
+    if (document.querySelector('.product-slider')) {
+      this.slides = document.querySelectorAll('.product-slide');
+      this.events();
+    }
   }
 
   events() {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sydney Fashion Store</title>
+  <title>Glamour Icon</title>
   <?php wp_head();?>
 </head>
 <body <?php body_class();?>>
@@ -24,9 +24,6 @@
           <a href="" class="twitter"><span class="dashicons dashicons-twitter"></span></a>
           <a href="" class="youtube"><span class="dashicons dashicons-youtube"></span></a>
         </div>
-      </div>
-      <div class="util_wrapper">
-        <span class="dashicons dashicons-search"></span>
       </div>
     </div>
   </header>

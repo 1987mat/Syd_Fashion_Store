@@ -99,7 +99,7 @@ body {
               transition: transform 0.4s ease;
 
               .product-card {
-                border: 0.5px solid gray;
+                border: 0.2px solid gray;
                 border-radius: 2px;
                 padding: 1em;
                 display: flex;
@@ -165,46 +165,74 @@ body {
         margin-bottom: 8em;
 
         img {
-          width: 20em;
+          width: 15em;
+          border-radius: 2px;
         }
       }
     }
   }
 
-  // Shop
+  // Shop Page
   &.woocommerce-shop {
-    .shop-container {
+    .aws-container {
+      width: 15em;
+      margin: 0 auto;
+    }
+
+    #primary {
       padding: 3em;
+      width: 100%;
 
-      .woocommerce {
-        padding: 4em 1em;
-
-        li {
+      #main {
+        .products {
+          margin-top: 2em;
+          padding: 2em;
+          width: 100%;
           display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          flex-wrap: wrap;
 
-          a {
+          li {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            gap: 1em;
+            list-style-type: none;
 
-            h2 {
+            a {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+
+              h2 {
+                color: #282828;
+              }
+
+              .price {
+                color: gray;
+              }
+
+              img {
+                opacity: 1;
+                transition: opacity 0.4s ease;
+
+                &:hover {
+                  opacity: 0.8;
+                }
+              }
+            }
+
+            .wp-element-button {
+              background-color: silver;
+              padding: 0.8em;
+              border-radius: 2px;
+              font-weight: bold;
               color: #282828;
-            }
-
-            span {
-              color: gray;
-            }
-
-            img {
-              opacity: 1;
-              transition: opacity 0.4s ease;
+              transition: background-color 0.2s ease;
 
               &:hover {
-                opacity: 0.8;
+                background-color: lightgray;
               }
             }
           }
@@ -213,62 +241,48 @@ body {
     }
   }
 
-  /* My Account Page */
-  &.woocommerce-account {
-    .woocommerce {
-      padding: 6em 1em;
-      display: flex;
-      gap: 3em;
-      width: 100vw;
+  &.single-product {
+    #primary {
+      padding: 3em;
+      width: 100%;
 
-      .woocommerce-MyAccount-navigation {
-        ul {
-          padding: 0;
-          margin: 0;
+      .wp-element-button {
+        background-color: silver;
+        padding: 0.8em;
+        border-radius: 2px;
+        font-weight: bold;
+        color: #282828;
+        transition: background-color 0.2s ease;
 
-          li {
-            list-style-type: none;
-            background-color: whitesmoke;
-            border-radius: 2px;
-            padding: 0.8em;
-            margin-top: 0.1em;
-
-            &:hover {
-              background-color: lightgray;
-              cursor: pointer;
-            }
-
-            &.is-active {
-              background-color: lightgray;
-            }
-
-            a {
-              text-decoration: none;
-              color: #282828;
-              font-weight: bold;
-            }
-          }
+        &:hover {
+          background-color: lightgray;
         }
       }
 
-      .woocommerce-MyAccount-content {
-        background-color: whitesmoke;
-        display: flex;
-        flex-direction: column;
-        padding: 1.5em;
-        border-radius: 2px;
-        box-shadow: 0 0 6px gray;
+      .price {
+        color: gray;
+      }
+
+      .product {
+        margin: 3em;
+
+        .summary {
+          .cart {
+            display: flex;
+            flex-direction: column;
+            width: 8em;
+            gap: 1em;
+          }
+        }
       }
     }
   }
 
-  @import 'components/footer';
-  @import 'components/search-modal';
-
-  .search_results {
-    .search_page_hero {
+  /* My Account Page */
+  &.woocommerce-account {
+    .account_hero {
       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('../assets/search-hero.jpg');
+        url('../images/account-hero.jpg');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -281,14 +295,66 @@ body {
       h1 {
         color: whitesmoke;
         font-size: 2.5rem;
+        font-family: 'Belleza', sans-serif;
+        letter-spacing: 1px;
       }
     }
 
-    .results {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+    .account_container {
+      padding: 1em;
+      margin-bottom: 5em;
+
+      .breadcrumb {
+        padding: 4em;
+      }
+
+      .woocommerce {
+        padding: 1em;
+        display: flex;
+        gap: 3em;
+        width: 100vw;
+
+        .woocommerce-MyAccount-navigation {
+          ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+              list-style-type: none;
+              background-color: whitesmoke;
+              border-radius: 2px;
+              padding: 0.8em;
+              margin-top: 0.1em;
+
+              &:hover {
+                background-color: lightgray;
+                cursor: pointer;
+              }
+
+              &.is-active {
+                background-color: lightgray;
+              }
+
+              a {
+                text-decoration: none;
+                color: #282828;
+                font-weight: bold;
+              }
+            }
+          }
+        }
+
+        .woocommerce-MyAccount-content {
+          background-color: whitesmoke;
+          display: flex;
+          flex-direction: column;
+          padding: 1.5em;
+          border-radius: 2px;
+          box-shadow: 0 0 6px gray;
+        }
+      }
     }
   }
+
+  @import 'components/footer';
 }

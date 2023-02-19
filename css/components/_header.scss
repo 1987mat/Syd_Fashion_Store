@@ -97,20 +97,5 @@
         }
       }
     }
-
-    .util_wrapper {
-      width: 20%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .dashicons-search {
-        font-size: 1.5rem;
-
-        &:hover {
-          cursor: pointer;
-        }
-      }
-    }
   }
 }

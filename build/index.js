@@ -11,8 +11,10 @@
 __webpack_require__.r(__webpack_exports__);
 class Slider {
   constructor() {
-    this.slides = document.querySelectorAll('.product-slide');
-    this.events();
+    if (document.querySelector('.product-slider')) {
+      this.slides = document.querySelectorAll('.product-slide');
+      this.events();
+    }
   }
   events() {
     let curSlide = 0;
@@ -42,62 +44,6 @@ class Slider {
   }
 }
 /* harmony default export */ __webpack_exports__["default"] = (Slider);
-
-/***/ }),
-
-/***/ "./src/modules/Search.js":
-/*!*******************************!*\
-  !*** ./src/modules/Search.js ***!
-  \*******************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Search": function() { return /* binding */ Search; }
-/* harmony export */ });
-class Search {
-  constructor() {
-    this.searchModal = document.querySelector('.search_wrapper');
-    this.searchIcon = document.querySelector('.dashicons-search');
-    this.searchInput = this.searchModal.querySelector('input');
-    this.closeIcon = document.querySelector('.close-icon');
-    this.searchResults = document.querySelector('.results');
-    this.events();
-  }
-  events() {
-    this.searchIcon.addEventListener('click', this.openSearchModal.bind(this));
-    window.addEventListener('keydown', e => {
-      if (this.searchModal.classList.contains('show')) {
-        if (e.key === 'Enter') {
-          e.preventDefault();
-          this.closeSearchModal();
-          this.displayResults();
-        }
-        if (e.key === 'Escape') {
-          this.closeSearchModal();
-        }
-      }
-    });
-    this.searchModal.addEventListener('click', e => {
-      if (e.target.tagName !== 'INPUT' || e.target.classList.contains('close-icon')) {
-        this.closeSearchModal();
-      }
-    });
-  }
-  openSearchModal() {
-    this.searchModal.classList.add('show');
-    this.searchInput.focus();
-  }
-  closeSearchModal() {
-    this.searchModal.classList.remove('show');
-    this.searchInput.value = '';
-  }
-  displayResults() {
-    fetch(siteData.root_url + '/wp-json/store/v1/search?term=' + this.searchInput.value).then(response => response.json()).then(results => {
-      console.log(results);
-    });
-  }
-}
 
 /***/ }),
 
@@ -194,14 +140,11 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_navbarScroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/navbarScroll */ "./src/modules/navbarScroll.js");
-/* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Search */ "./src/modules/Search.js");
-/* harmony import */ var _modules_Carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/Carousel */ "./src/modules/Carousel.js");
+/* harmony import */ var _modules_Carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Carousel */ "./src/modules/Carousel.js");
 
 
-
-const search = new _modules_Search__WEBPACK_IMPORTED_MODULE_1__.Search();
-const slider = new _modules_Carousel__WEBPACK_IMPORTED_MODULE_2__["default"]();
 (0,_modules_navbarScroll__WEBPACK_IMPORTED_MODULE_0__.hideNavbar)();
+const slider = new _modules_Carousel__WEBPACK_IMPORTED_MODULE_1__["default"]();
 }();
 /******/ })()
 ;

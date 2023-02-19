@@ -52,9 +52,10 @@
     <h2>JOIN THE COMMUNITY</h2>
     <hr>
     <div class="social_images">
-      <img src=<?php echo get_template_directory_uri() . '/images/feed1.jpg';?> alt="feed1">
-      <img src=<?php echo get_template_directory_uri() . '/images/feed2.jpg';?> alt="feed2">
-      <img src=<?php echo get_template_directory_uri() . '/images/feed3.jpg';?> alt="feed3">
+      <img src=<?php echo get_template_directory_uri() . '/images/feed1_optimized.jpg';?> alt="social-media-photo">
+      <img src=<?php echo get_template_directory_uri() . '/images/feed2.jpg';?> alt="social-media-photo2">
+      <img src=<?php echo get_template_directory_uri() . '/images/feed3_optimized.jpg';?> alt="social-media-photo3">
+      <img src=<?php echo get_template_directory_uri() . '/images/feed4.jpg';?> alt="social-media-photo4">
     </div>
   </section>
 </main>

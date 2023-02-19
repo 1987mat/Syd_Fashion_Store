@@ -98,18 +98,6 @@ body .site_header .header_wrapper .logo-social_wrapper .social_header .dashicons
 body .site_header .header_wrapper .logo-social_wrapper .social_header .dashicons-youtube {
   color: red;
 }
-body .site_header .header_wrapper .util_wrapper {
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .site_header .header_wrapper .util_wrapper .dashicons-search {
-  font-size: 1.5rem;
-}
-body .site_header .header_wrapper .util_wrapper .dashicons-search:hover {
-  cursor: pointer;
-}
 body a {
   color: #282828;
 }
@@ -118,7 +106,7 @@ body main {
   flex-direction: column;
 }
 body main .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero_optimized.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -228,7 +216,7 @@ body main .product-slider .carousel-container .carousel-wrapper .slider .product
   transition: transform 0.4s ease;
 }
 body main .product-slider .carousel-container .carousel-wrapper .slider .product-slide .product-card {
-  border: 0.5px solid gray;
+  border: 0.2px solid gray;
   border-radius: 2px;
   padding: 1em;
   display: flex;
@@ -281,69 +269,143 @@ body main .social .social_images {
   margin-bottom: 8em;
 }
 body main .social .social_images img {
-  width: 20em;
+  width: 15em;
+  border-radius: 2px;
 }
-body.woocommerce-shop .shop-container {
+body.woocommerce-shop .aws-container {
+  width: 15em;
+  margin: 0 auto;
+}
+body.woocommerce-shop #primary {
   padding: 3em;
+  width: 100%;
 }
-body.woocommerce-shop .shop-container .woocommerce {
-  padding: 4em 1em;
+body.woocommerce-shop #primary #main .products {
+  margin-top: 2em;
+  padding: 2em;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
-body.woocommerce-shop .shop-container .woocommerce li {
+body.woocommerce-shop #primary #main .products li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  list-style-type: none;
+}
+body.woocommerce-shop #primary #main .products li a {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-body.woocommerce-shop .shop-container .woocommerce li a {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-body.woocommerce-shop .shop-container .woocommerce li a h2 {
+body.woocommerce-shop #primary #main .products li a h2 {
   color: #282828;
 }
-body.woocommerce-shop .shop-container .woocommerce li a span {
+body.woocommerce-shop #primary #main .products li a .price {
   color: gray;
 }
-body.woocommerce-shop .shop-container .woocommerce li a img {
+body.woocommerce-shop #primary #main .products li a img {
   opacity: 1;
   transition: opacity 0.4s ease;
 }
-body.woocommerce-shop .shop-container .woocommerce li a img:hover {
+body.woocommerce-shop #primary #main .products li a img:hover {
   opacity: 0.8;
 }
-body.woocommerce-account .woocommerce {
-  padding: 6em 1em;
+body.woocommerce-shop #primary #main .products li .wp-element-button {
+  background-color: silver;
+  padding: 0.8em;
+  border-radius: 2px;
+  font-weight: bold;
+  color: #282828;
+  transition: background-color 0.2s ease;
+}
+body.woocommerce-shop #primary #main .products li .wp-element-button:hover {
+  background-color: lightgray;
+}
+body.single-product #primary {
+  padding: 3em;
+  width: 100%;
+}
+body.single-product #primary .wp-element-button {
+  background-color: silver;
+  padding: 0.8em;
+  border-radius: 2px;
+  font-weight: bold;
+  color: #282828;
+  transition: background-color 0.2s ease;
+}
+body.single-product #primary .wp-element-button:hover {
+  background-color: lightgray;
+}
+body.single-product #primary .price {
+  color: gray;
+}
+body.single-product #primary .product {
+  margin: 3em;
+}
+body.single-product #primary .product .summary .cart {
+  display: flex;
+  flex-direction: column;
+  width: 8em;
+  gap: 1em;
+}
+body.woocommerce-account .account_hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/account-hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body.woocommerce-account .account_hero h1 {
+  color: whitesmoke;
+  font-size: 2.5rem;
+  font-family: "Belleza", sans-serif;
+  letter-spacing: 1px;
+}
+body.woocommerce-account .account_container {
+  padding: 1em;
+  margin-bottom: 5em;
+}
+body.woocommerce-account .account_container .breadcrumb {
+  padding: 4em;
+}
+body.woocommerce-account .account_container .woocommerce {
+  padding: 1em;
   display: flex;
   gap: 3em;
   width: 100vw;
 }
-body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul {
+body.woocommerce-account .account_container .woocommerce .woocommerce-MyAccount-navigation ul {
   padding: 0;
   margin: 0;
 }
-body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li {
+body.woocommerce-account .account_container .woocommerce .woocommerce-MyAccount-navigation ul li {
   list-style-type: none;
   background-color: whitesmoke;
   border-radius: 2px;
   padding: 0.8em;
   margin-top: 0.1em;
 }
-body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li:hover {
+body.woocommerce-account .account_container .woocommerce .woocommerce-MyAccount-navigation ul li:hover {
   background-color: lightgray;
   cursor: pointer;
 }
-body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li.is-active {
+body.woocommerce-account .account_container .woocommerce .woocommerce-MyAccount-navigation ul li.is-active {
   background-color: lightgray;
 }
-body.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation ul li a {
+body.woocommerce-account .account_container .woocommerce .woocommerce-MyAccount-navigation ul li a {
   text-decoration: none;
   color: #282828;
   font-weight: bold;
 }
-body.woocommerce-account .woocommerce .woocommerce-MyAccount-content {
+body.woocommerce-account .account_container .woocommerce .woocommerce-MyAccount-content {
   background-color: whitesmoke;
   display: flex;
   flex-direction: column;
@@ -363,7 +425,7 @@ body footer {
   justify-content: center;
   align-items: center;
   gap: 5em;
-  box-shadow: 0 -4px 4px black;
+  box-shadow: 0 -8px 8px black;
 }
 body footer .logo-social_wrapper_footer {
   display: flex;
@@ -416,70 +478,4 @@ body footer .copyright_wrapper span a {
 }
 body footer .copyright_wrapper span a:hover {
   color: lightgray;
-}
-body .search_wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  position: fixed;
-  z-index: -1;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-body .search_wrapper.show {
-  opacity: 1;
-  z-index: 10;
-}
-body .search_wrapper .search_input_field {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-body .search_wrapper .search_input_field input {
-  text-align: center;
-  width: 70%;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  border-bottom: 1px solid white;
-  padding: 0.5em;
-  font-size: 3rem;
-  outline: none;
-  background-color: transparent;
-}
-body .search_wrapper .search_input_field .close-icon {
-  font-size: 2rem;
-  color: white;
-  transition: transform 0.5s ease;
-}
-body .search_wrapper .search_input_field .close-icon:hover {
-  cursor: pointer;
-  transform: rotate(180deg);
-}
-body .search_results .search_page_hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/search-hero.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 50vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .search_results .search_page_hero h1 {
-  color: whitesmoke;
-  font-size: 2.5rem;
-}
-body .search_results .results {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }/*# sourceMappingURL=style.css.map */

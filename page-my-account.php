@@ -2,7 +2,10 @@
   get_header();
 ?>
 
-  <div class="shop-container">
+<div class="account_hero">
+  <h1>My Account</h1>
+</div>
+<div class="account_container">
   <?php 
 
     if (!is_home()) { ?>
