@@ -1,5 +1,7 @@
 import { hideNavbar } from './modules/navbarScroll';
-import Slider from './modules/Carousel';
+import { animationOnScroll } from './modules/animationOnScroll';
+import MobileMenu from './modules/MobileMenu';
 
 hideNavbar();
-const slider = new Slider();
+animationOnScroll();
+const mobileMenu = new MobileMenu();

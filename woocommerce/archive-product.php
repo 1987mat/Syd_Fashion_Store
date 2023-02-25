@@ -30,8 +30,7 @@ get_header( 'shop' );
 do_action( 'woocommerce_before_main_content' );
 
 ?>
-<?php aws_get_search_form( true ); ?>
-<?php
+<?php aws_get_search_form( true ); 
 
 if ( woocommerce_product_loop() ) {
 

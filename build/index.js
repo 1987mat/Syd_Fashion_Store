@@ -2,48 +2,55 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/modules/Carousel.js":
-/*!*********************************!*\
-  !*** ./src/modules/Carousel.js ***!
-  \*********************************/
+/***/ "./src/modules/MobileMenu.js":
+/*!***********************************!*\
+  !*** ./src/modules/MobileMenu.js ***!
+  \***********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-class Slider {
+class MobileMenu {
   constructor() {
-    if (document.querySelector('.product-slider')) {
-      this.slides = document.querySelectorAll('.product-slide');
-      this.events();
-    }
+    this.mobileMenu = document.querySelector('.menu_wrapper');
+    this.hamburger = document.querySelector('.hamburger');
+    this.events();
   }
   events() {
-    let curSlide = 0;
-    let maxSlide = this.slides.length - 1;
-    const nextBtn = document.querySelector('.next-btn');
-    const prevBtn = document.querySelector('.prev-btn');
-    nextBtn.addEventListener('click', () => {
-      if (curSlide === maxSlide) {
-        curSlide = 0;
-      } else {
-        curSlide++;
-      }
-      this.slides.forEach(slide => {
-        slide.style.transform = `translateX(${100 * -curSlide}%)`;
-      });
-    });
-    prevBtn.addEventListener('click', () => {
-      if (curSlide === 0) {
-        curSlide = maxSlide;
-      } else {
-        curSlide--;
-      }
-      this.slides.forEach(slide => {
-        slide.style.transform = `translateX(${-100 * curSlide}%)`;
-      });
+    this.hamburger.addEventListener('click', () => {
+      this.mobileMenu.classList.toggle('open');
+      this.hamburger.classList.toggle('active');
+      document.body.classList.toggle('no-scroll');
     });
   }
 }
-/* harmony default export */ __webpack_exports__["default"] = (Slider);
+/* harmony default export */ __webpack_exports__["default"] = (MobileMenu);
+
+/***/ }),
+
+/***/ "./src/modules/animationOnScroll.js":
+/*!******************************************!*\
+  !*** ./src/modules/animationOnScroll.js ***!
+  \******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "animationOnScroll": function() { return /* binding */ animationOnScroll; }
+/* harmony export */ });
+function animationOnScroll() {
+  const elements = document.querySelectorAll('[data-animate]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle('fade-in', entry.isIntersecting);
+      if (entry.isIntersecting) observer.unobserve(entry.target);
+    });
+  }, {
+    treshold: 0.7
+  });
+  [...elements].forEach(el => {
+    observer.observe(el);
+  });
+}
 
 /***/ }),
 
@@ -59,7 +66,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function hideNavbar() {
   let previousScroll = 0;
-  const header = document.querySelector('header');
+  const header = document.querySelector('.site_header');
   const headerHeight = header.clientHeight;
   window.addEventListener('scroll', () => {
     if (window.innerWidth >= 992) {
@@ -140,11 +147,14 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_navbarScroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/navbarScroll */ "./src/modules/navbarScroll.js");
-/* harmony import */ var _modules_Carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Carousel */ "./src/modules/Carousel.js");
+/* harmony import */ var _modules_animationOnScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/animationOnScroll */ "./src/modules/animationOnScroll.js");
+/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/MobileMenu */ "./src/modules/MobileMenu.js");
+
 
 
 (0,_modules_navbarScroll__WEBPACK_IMPORTED_MODULE_0__.hideNavbar)();
-const slider = new _modules_Carousel__WEBPACK_IMPORTED_MODULE_1__["default"]();
+(0,_modules_animationOnScroll__WEBPACK_IMPORTED_MODULE_1__.animationOnScroll)();
+const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_2__["default"]();
 }();
 /******/ })()
 ;

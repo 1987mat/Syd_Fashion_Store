@@ -29,26 +29,59 @@
   
   add_action( 'init', 'register_my_menus' );
 
-function get_breadcrumb() {
 
-  echo '<a href="'.home_url().'" rel="nofollow" class="breadcrumb-link">Home</a>';
+// change the breadcrumb on the product page
+add_filter( 'woocommerce_get_breadcrumb', 'custom_breadcrumb', 20, 2 );
+function custom_breadcrumb( $crumbs, $breadcrumb ) {
 
-  if (is_category() || is_single()) {
-      echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
-      the_category(' &#187; ');
-      if (is_single()) {
-        echo " &nbsp;&nbsp;&#187;&nbsp;&nbsp; ";
-        the_title();
-      }
-  } else if (is_page()) {
-    echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;";
-    echo the_title();
-  } else if (is_search()) {
-    echo "&nbsp;&nbsp;&#187;&nbsp;&nbsp;Search Results for... ";
-    echo '"<em>';
-    echo the_search_query();
-    echo '</em>"';
-  }
+    // only on the single product page
+    if ( ! is_product() ) {
+        return $crumbs;
+    }
+    
+    // gets the first element of the array "$crumbs"
+    $new_crumbs[] = reset( $crumbs );
+    // gets the last element of the array "$crumbs"
+    $new_crumbs[] = end( $crumbs );
+
+    return $new_crumbs;
+
 }
 
+function add_script_to_footer(){
+  ?>
+    <script>
+      jQuery(document).ready(function($){
+        $(document).on('click', '.plus', function(e) { 
+          $input = $(this).prev('input.qty');
+          var val = parseInt($input.val());
+          var step = $input.attr('step');
+          step = 'undefined' !== typeof(step) ? parseInt(step) : 1;
+          $input.val( val + step ).change();
+          $('#update-cart-btn').addClass('active');
+        });
+
+        $(document).on('click', '.minus',  
+          function(e) {
+          $input = $(this).next('input.qty');
+          var val = parseInt($input.val());
+          var step = $input.attr('step');
+          step = 'undefined' !== typeof(step) ? parseInt(step) : 1;
+          if (val > 0) {
+            $input.val( val - step ).change();
+            $('#update-cart-btn').addClass('active');
+          }
+        });
+      });
+    </script>
+   <?php
+  }
+
+// jQuery plus & minus button for quantity input
+add_action( 'wp_footer', 'add_script_to_footer');
+
+
+
+
+add_shortcode('wc_sorting','woocommerce_catalog_ordering');
 

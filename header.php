@@ -10,10 +10,13 @@
 <body <?php body_class();?>>
   <header class="site_header">
     <div class="header_wrapper">
+      <div class="hamburger">
+        <div></div>
+      </div>
       <div class="menu_wrapper">
         <?php 
           wp_nav_menu( array( 
-           'theme_location' => 'header'));
+            'theme_location' => 'header'));
         ?>
       </div>
       <div class="logo-social_wrapper">

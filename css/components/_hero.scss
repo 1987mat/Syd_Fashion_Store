@@ -3,37 +3,46 @@
     url('../images/hero_optimized.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: cover;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
 
   .heading {
-    margin-top: -5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 80vw;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: transform 0.9s ease, opacity 0.5s ease;
+
+    &.fade-in {
+      transform: translateY(0);
+      opacity: 1;
+    }
 
     h4 {
-      font-size: 1.8rem;
+      text-align: center;
       color: whitesmoke;
-      margin-bottom: -1em;
+      margin-bottom: -2em;
       font-family: 'Belleza', sans-serif;
     }
 
     h1 {
-      font-size: 5.5rem;
+      text-align: center;
       color: whitesmoke;
       font-family: 'Belleza', sans-serif;
       letter-spacing: 8px;
     }
 
     a {
+      margin-top: -2em;
       border: 0;
-      border-radius: 5px;
+      border-radius: 2px;
       padding: 1em 2em;
       font-weight: bold;
       font-size: 1.25rem;

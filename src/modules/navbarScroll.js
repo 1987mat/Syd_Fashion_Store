@@ -1,6 +1,6 @@
 export function hideNavbar() {
   let previousScroll = 0;
-  const header = document.querySelector('header');
+  const header = document.querySelector('.site_header');
   const headerHeight = header.clientHeight;
 
   window.addEventListener('scroll', () => {
