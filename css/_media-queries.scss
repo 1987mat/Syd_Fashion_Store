@@ -35,6 +35,7 @@ $biggerScreen2: 2559px;
 
         .shop_sale_section {
           flex-direction: column;
+
           .card-link {
             width: 100%;
           }
@@ -290,7 +291,7 @@ $biggerScreen2: 2559px;
       main {
         .hero {
           .heading {
-            gap: 1em;
+            gap: 0.5em;
             margin-top: 5em;
 
             h4 {
@@ -467,7 +468,7 @@ $biggerScreen2: 2559px;
             }
 
             a {
-              font-size: 2rem;
+              font-size: 1.5rem;
             }
           }
         }

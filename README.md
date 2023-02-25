@@ -6,7 +6,7 @@
 
 - [Repo](https://github.com/1987mat/Syd_Fashion_Store 'Repo')
 
-- [Live](<Homepage url> 'Live View')
+- [Live](http://glamouricon.org/ 'Live View')
 
 ## Screenshots
 

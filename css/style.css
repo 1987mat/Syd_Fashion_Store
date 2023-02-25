@@ -146,7 +146,6 @@ html body main .hero .heading a {
   border-radius: 2px;
   padding: 1em 2em;
   font-weight: bold;
-  font-size: 1.25rem;
   background-color: lightgray;
   text-decoration: none;
   color: #282828;
@@ -879,7 +878,7 @@ html body footer .copyright_wrapper span a:hover {
     width: 12em;
   }
   html body main .hero .heading {
-    gap: 1em;
+    gap: 0.5em;
     margin-top: 5em;
   }
   html body main .hero .heading h4 {
@@ -975,7 +974,7 @@ html body footer .copyright_wrapper span a:hover {
     font-size: 8rem;
   }
   html body main .hero .heading a {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 2559px) {
