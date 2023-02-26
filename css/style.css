@@ -595,6 +595,21 @@ html body footer .copyright_wrapper span a {
 html body footer .copyright_wrapper span a:hover {
   color: lightgray;
 }
+html body .xoo-wsc-product {
+  display: flex;
+  border-bottom: 1px solid rgba(110, 130, 208, 0.17);
+}
+html body .xoo-wsc-img-col img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+html body .xoo-wsc-header {
+  background-color: black;
+}
+html body .xoo-wsc-header {
+  color: #ffffff !important;
+}
 
 @media screen and (min-width: 320px) {
   html {
