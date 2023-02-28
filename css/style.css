@@ -21,11 +21,10 @@ html body .site_header {
   height: fit-content;
   padding: 1.5em;
   background-color: whitesmoke;
-  position: fixed;
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 10px 10px -10px gray;
+  box-shadow: 0 8px 8px -8px black;
   transition: top 0.8s ease;
 }
 html body .site_header.hide {
@@ -107,7 +106,7 @@ html body main .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero_optimized.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: cover;
+  background-position: center;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -189,7 +188,7 @@ html body main .shop_sale_section .card-link div span {
   position: absolute;
   background-color: whitesmoke;
   border-radius: 2px;
-  padding: 1em;
+  padding: 1em 2em;
   font-weight: bold;
   transition: background-color 0.4s ease;
 }
@@ -622,7 +621,6 @@ html body .xoo-wsc-header {
     /* Checkout Page */
   }
   html body .site_header {
-    box-shadow: 0 5px 5px -5px black;
     height: -moz-fit-content;
     height: fit-content;
   }
@@ -633,8 +631,8 @@ html body .xoo-wsc-header {
   }
   html body .site_header .header_wrapper .hamburger {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 15px;
+    left: 15px;
     z-index: 20;
     width: 2.5em;
     height: 2.5em;
@@ -742,6 +740,9 @@ html body .xoo-wsc-header {
   html body main .hero .heading h1 {
     font-size: 4rem;
   }
+  html body main .hero .heading a {
+    font-size: 1.25rem;
+  }
   html body main .shop_sale_section {
     flex-direction: column;
   }
@@ -753,7 +754,6 @@ html body .xoo-wsc-header {
   }
   html body main .social .social-images {
     flex-direction: column;
-    width: 5em;
   }
   html body.woocommerce-shop #primary {
     padding: 3em;
@@ -838,7 +838,7 @@ html body .xoo-wsc-header {
 }
 @media screen and (min-width: 413px) {
   html body main .hero .heading {
-    margin-top: 10em;
+    margin-top: 8em;
   }
   html body main .hero .heading h4 {
     font-size: 1.8rem;
@@ -851,6 +851,9 @@ html body .xoo-wsc-header {
   html {
     font-size: 95%;
   }
+  html body .site_header .header_wrapper .hamburger {
+    left: 20px;
+  }
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul {
     gap: 5em;
   }
@@ -859,6 +862,10 @@ html body .xoo-wsc-header {
   }
   html body main .hero .heading h1 {
     font-size: 5rem;
+  }
+  html body main .social .social-images {
+    flex-direction: initial;
+    flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 992px) {
@@ -893,14 +900,13 @@ html body .xoo-wsc-header {
     width: 12em;
   }
   html body main .hero .heading {
-    gap: 0.5em;
-    margin-top: 5em;
+    gap: 0.2em;
   }
   html body main .hero .heading h4 {
     font-size: 2rem;
   }
   html body main .hero .heading h1 {
-    font-size: 6rem;
+    font-size: 7rem;
   }
   html body main .shop_sale_section {
     flex-direction: initial;
@@ -913,6 +919,7 @@ html body .xoo-wsc-header {
   }
   html body main .social .social-images {
     flex-direction: initial;
+    flex-wrap: nowrap;
     gap: 1em;
     width: 90%;
   }

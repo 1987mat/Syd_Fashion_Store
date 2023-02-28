@@ -3,11 +3,10 @@
   height: fit-content;
   padding: 1.5em;
   background-color: whitesmoke;
-  position: fixed;
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 10px 10px -10px gray;
+  box-shadow: 0 8px 8px -8px black;
   transition: top 0.8s ease;
 
   &.hide {

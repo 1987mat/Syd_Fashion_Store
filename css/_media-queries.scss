@@ -30,6 +30,10 @@ $biggerScreen2: 2559px;
             h1 {
               font-size: 4rem;
             }
+
+            a {
+              font-size: 1.25rem;
+            }
           }
         }
 
@@ -48,7 +52,6 @@ $biggerScreen2: 2559px;
 
           .social-images {
             flex-direction: column;
-            width: 5em;
           }
         }
       }
@@ -191,7 +194,7 @@ $biggerScreen2: 2559px;
       main {
         .hero {
           .heading {
-            margin-top: 10em;
+            margin-top: 8em;
 
             h4 {
               font-size: 1.8rem;
@@ -214,6 +217,10 @@ $biggerScreen2: 2559px;
     body {
       .site_header {
         .header_wrapper {
+          .hamburger {
+            left: 20px;
+          }
+
           .menu_wrapper {
             .menu-header-container {
               ul {
@@ -234,6 +241,13 @@ $biggerScreen2: 2559px;
             h1 {
               font-size: 5rem;
             }
+          }
+        }
+
+        .social {
+          .social-images {
+            flex-direction: initial;
+            flex-wrap: wrap;
           }
         }
       }
@@ -291,15 +305,14 @@ $biggerScreen2: 2559px;
       main {
         .hero {
           .heading {
-            gap: 0.5em;
-            margin-top: 5em;
+            gap: 0.2em;
 
             h4 {
               font-size: 2rem;
             }
 
             h1 {
-              font-size: 6rem;
+              font-size: 7rem;
             }
           }
         }
@@ -319,6 +332,7 @@ $biggerScreen2: 2559px;
 
           .social-images {
             flex-direction: initial;
+            flex-wrap: nowrap;
             gap: 1em;
             width: 90%;
 

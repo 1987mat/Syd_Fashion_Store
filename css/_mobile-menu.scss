@@ -1,5 +1,4 @@
 .site_header {
-  box-shadow: 0 5px 5px -5px black;
   height: fit-content;
 
   .header_wrapper {
@@ -9,8 +8,8 @@
 
     .hamburger {
       position: absolute;
-      top: 10px;
-      left: 10px;
+      top: 15px;
+      left: 15px;
       z-index: 20;
       width: 2.5em;
       height: 2.5em;
