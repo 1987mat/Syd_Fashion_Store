@@ -80,8 +80,5 @@ function add_script_to_footer(){
 // jQuery plus & minus button for quantity input
 add_action( 'wp_footer', 'add_script_to_footer');
 
-
-
-
 add_shortcode('wc_sorting','woocommerce_catalog_ordering');
 
