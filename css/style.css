@@ -246,7 +246,7 @@ html body main .social .social-images img {
   width: 12em;
 }
 html body.woocommerce-shop .aws-container {
-  width: 15em;
+  width: 50%;
   margin: 0 auto;
   margin-top: 2em;
   margin-bottom: 3em;
@@ -265,10 +265,6 @@ html body.woocommerce-shop #primary #main .woocommerce-breadcrumb a {
 html body.woocommerce-shop #primary #main .woocommerce-result-count,
 html body.woocommerce-shop #primary #main .woocommerce-ordering {
   display: none;
-}
-html body.woocommerce-shop #primary #main .products {
-  padding: 1em;
-  width: 100%;
 }
 html body.woocommerce-shop #primary #main .products li {
   display: flex;
@@ -326,6 +322,9 @@ html body.single-product #primary .wp-element-button:hover {
 }
 html body.single-product #primary .price {
   color: gray;
+}
+html body.single-product #primary .product {
+  margin-top: 1em;
 }
 html body.single-product #primary .product .summary .quantity {
   border: 1px solid black;
@@ -770,11 +769,6 @@ html body .xoo-wsc-header {
   }
   html body.woocommerce-shop #primary #main .products {
     margin-top: 3em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
   }
   html body.single-product #primary .product .related {
     margin-top: 4em;
@@ -827,15 +821,6 @@ html body .xoo-wsc-header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  html body.page-id-71 .sale_container .woocommerce .products {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  html body.page-id-71 .sale_container .woocommerce .products li {
-    width: 100%;
   }
   html body footer .logo-social_wrapper_footer {
     display: flex;
@@ -931,12 +916,6 @@ html body .xoo-wsc-header {
   html body main .hero .heading h1 {
     font-size: 7rem;
   }
-  html body main .shop_sale_section {
-    flex-direction: initial;
-  }
-  html body main .shop_sale_section .card-link {
-    width: 50%;
-  }
   html body main .social h2 {
     font-size: 3rem;
   }
@@ -948,10 +927,6 @@ html body .xoo-wsc-header {
   }
   html body main .social .social-images img {
     width: 25%;
-  }
-  html body.woocommerce-shop #primary #main .products {
-    display: block;
-    padding: 1em;
   }
   html body.single-product #primary .product .related .products {
     display: flex;
@@ -978,12 +953,6 @@ html body .xoo-wsc-header {
   html body.page-id-71 .sale_container .woocommerce {
     padding: 5em 2em;
     display: block;
-  }
-  html body.page-id-71 .sale_container .woocommerce .products {
-    flex-wrap: wrap;
-  }
-  html body.page-id-71 .sale_container .woocommerce .products li {
-    width: initial;
   }
   html body footer .logo-social_wrapper_footer {
     flex-direction: row;

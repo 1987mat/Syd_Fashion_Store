@@ -21,7 +21,7 @@
     <a href="<?php echo site_url('/sale-page');?>" aria-label="sale" class="card-link" data-animate>
       <div>
         <img src=<?php echo get_template_directory_uri() . '/images/sale.jpg';?> alt="social-media-photo">
-        <span>SALE</span>
+        <span>SALES</span>
       </div>
     </a>
   </section>

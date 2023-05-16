@@ -1,6 +1,6 @@
 &.woocommerce-shop {
   .aws-container {
-    width: 15em;
+    width: 50%;
     margin: 0 auto;
     margin-top: 2em;
     margin-bottom: 3em;
@@ -26,9 +26,6 @@
       }
 
       .products {
-        padding: 1em;
-        width: 100%;
-
         li {
           display: flex;
           flex-direction: column;
