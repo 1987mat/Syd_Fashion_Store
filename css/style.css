@@ -916,6 +916,9 @@ html body .xoo-wsc-header {
   html body main .hero .heading h1 {
     font-size: 7rem;
   }
+  html body main .shop_sale_section {
+    flex-direction: initial;
+  }
   html body main .social h2 {
     font-size: 3rem;
   }
