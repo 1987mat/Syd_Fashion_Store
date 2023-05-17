@@ -369,10 +369,6 @@ html body.single-product #primary .product .related h2 {
   text-align: center;
 }
 html body.single-product #primary .product .related .products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   padding: 0;
 }
 html body.single-product #primary .product .related .products li {
@@ -622,7 +618,6 @@ html body .xoo-wsc-header {
     /* My Account Page */
     /* CartPage */
     /* Checkout Page */
-    /* SALES PAGE */
   }
   html body .site_header {
     height: -moz-fit-content;
@@ -778,10 +773,6 @@ html body .xoo-wsc-header {
   }
   html body.single-product #primary .product .related .products {
     margin-top: 6em;
-    flex-direction: column;
-  }
-  html body.single-product #primary .product .related .products li {
-    width: 90%;
   }
   html body.woocommerce-account .account_container .woocommerce {
     flex-direction: column;
@@ -815,12 +806,6 @@ html body .xoo-wsc-header {
   html body.woocommerce-checkout .woocommerce .wp-element-button:hover {
     background-color: whitesmoke;
     color: #282828;
-  }
-  html body.page-id-71 .sale_container .woocommerce {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
   html body footer .logo-social_wrapper_footer {
     display: flex;
@@ -931,13 +916,6 @@ html body .xoo-wsc-header {
   html body main .social .social-images img {
     width: 25%;
   }
-  html body.single-product #primary .product .related .products {
-    display: flex;
-    flex-direction: initial;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
   html body.single-product #primary .product .related .products li {
     width: initial;
   }
@@ -952,10 +930,6 @@ html body .xoo-wsc-header {
   }
   html body.woocommerce-cart .woocommerce {
     margin-top: 1em;
-  }
-  html body.page-id-71 .sale_container .woocommerce {
-    padding: 5em 2em;
-    display: block;
   }
   html body footer .logo-social_wrapper_footer {
     flex-direction: row;

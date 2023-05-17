@@ -85,11 +85,6 @@ $biggerScreen2: 2559px;
 
               .products {
                 margin-top: 6em;
-                flex-direction: column;
-
-                li {
-                  width: 90%;
-                }
               }
             }
           }
@@ -147,18 +142,6 @@ $biggerScreen2: 2559px;
               background-color: whitesmoke;
               color: #282828;
             }
-          }
-        }
-      }
-
-      /* SALES PAGE */
-      &.page-id-71 {
-        .sale_container {
-          .woocommerce {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
           }
         }
       }
@@ -351,12 +334,6 @@ $biggerScreen2: 2559px;
           .product {
             .related {
               .products {
-                display: flex;
-                flex-direction: initial;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-
                 li {
                   width: initial;
                 }
@@ -383,15 +360,6 @@ $biggerScreen2: 2559px;
       &.woocommerce-cart {
         .woocommerce {
           margin-top: 1em;
-        }
-      }
-
-      &.page-id-71 {
-        .sale_container {
-          .woocommerce {
-            padding: 5em 2em;
-            display: block;
-          }
         }
       }
 
