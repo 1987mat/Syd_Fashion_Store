@@ -2,7 +2,7 @@
   width: 100vw;
   height: fit-content;
   padding: 1.5em;
-  background-color: whitesmoke;
+  background-color: white;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -38,6 +38,25 @@
             }
           }
         }
+
+        /* Dropdown submenu */
+        // .menu-item-has-children {
+        //   position: relative;
+
+        //   ul {
+        //     display: none;
+        //   }
+
+        //   &:hover {
+        //     ul {
+        //       display: block;
+        //       position: absolute;
+        //       top: 1em;
+        //       padding: 0.8em;
+        //       left: 10%;
+        //     }
+        //   }
+        // }
       }
     }
 
@@ -46,7 +65,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 0.5em;
+      gap: 1em;
 
       .logo_link {
         display: flex;

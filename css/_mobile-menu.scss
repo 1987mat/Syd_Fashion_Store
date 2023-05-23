@@ -51,7 +51,7 @@
         transition: transform 0.2s linear;
       }
 
-      // Turns into X when clicked //
+      /* Turns into X when clicked */
       &.active {
         rotate: 180deg;
 
@@ -77,7 +77,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: whitesmoke;
+      background: white;
       position: fixed;
       height: 100vh;
       width: 90vw;
@@ -94,6 +94,7 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          gap: 4em;
 
           li {
             list-style-type: none;
@@ -101,6 +102,25 @@
 
             a {
               font-size: 2rem;
+            }
+          }
+        }
+
+        /* Drodpdown submenu */
+        .menu-item-has-children {
+          position: relative;
+
+          ul {
+            display: none;
+          }
+
+          &:hover {
+            ul {
+              display: block;
+              position: absolute;
+              top: 1em;
+              padding: 3em;
+              left: 0;
             }
           }
         }

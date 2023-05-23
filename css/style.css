@@ -20,7 +20,7 @@ html body .site_header {
   height: -moz-fit-content;
   height: fit-content;
   padding: 1.5em;
-  background-color: whitesmoke;
+  background-color: white;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -41,6 +41,7 @@ html body .site_header .header_wrapper .menu_wrapper {
 html body .site_header .header_wrapper .menu_wrapper .menu {
   display: flex;
   gap: 2em;
+  /* Dropdown submenu */
 }
 html body .site_header .header_wrapper .menu_wrapper .menu li {
   list-style-type: none;
@@ -56,7 +57,7 @@ html body .site_header .header_wrapper .logo-social_wrapper {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.5em;
+  gap: 1em;
 }
 html body .site_header .header_wrapper .logo-social_wrapper .logo_link {
   display: flex;
@@ -142,6 +143,7 @@ html body main .hero .heading a {
   font-weight: bold;
   background: rgb(255, 255, 255);
   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(159, 158, 175) 100%);
+  opacity: 0.85;
   text-decoration: none;
   color: #282828;
   transition: opacity 0.6s ease;
@@ -149,7 +151,7 @@ html body main .hero .heading a {
 }
 html body main .hero .heading a:hover {
   cursor: pointer;
-  opacity: 0.85;
+  opacity: 1;
 }
 html body main .shop_sale_section {
   display: flex;
@@ -244,7 +246,7 @@ html body.woocommerce-shop .aws-container {
   margin: 0 auto;
   margin-top: 2em;
   margin-bottom: 3em;
-  box-shadow: 0 0 3px gray;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 html body.woocommerce-shop #primary {
   padding: 3em;
@@ -539,10 +541,10 @@ html body footer {
   box-shadow: 0 0 20px black;
 }
 html body footer .logo-social_wrapper_footer {
-  width: 100%;
+  width: 95%;
 }
-html body footer .logo-social_wrapper_footer .logo_link img {
-  width: 4em;
+html body footer .logo-social_wrapper_footer .logo_link {
+  padding-top: 1em;
 }
 html body footer .logo-social_wrapper_footer .social_footer {
   display: flex;
@@ -635,6 +637,7 @@ html body .xoo-wsc-header {
     align-items: center;
     rotate: 0deg;
     transition: rotate 0.2s linear;
+    /* Turns into X when clicked */
   }
   html body .site_header .header_wrapper .hamburger div {
     position: absolute;
@@ -683,7 +686,7 @@ html body .xoo-wsc-header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: whitesmoke;
+    background: white;
     position: fixed;
     height: 100vh;
     width: 90vw;
@@ -692,6 +695,9 @@ html body .xoo-wsc-header {
     transform: translateX(-100%);
     transition: transform 0.4s ease-in-out;
   }
+  html body .site_header .header_wrapper .menu_wrapper .menu-header-container {
+    /* Drodpdown submenu */
+  }
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul {
     padding: 0;
     margin: 0;
@@ -699,6 +705,7 @@ html body .xoo-wsc-header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 4em;
   }
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul li {
     list-style-type: none;
@@ -706,6 +713,19 @@ html body .xoo-wsc-header {
   }
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul li a {
     font-size: 2rem;
+  }
+  html body .site_header .header_wrapper .menu_wrapper .menu-header-container .menu-item-has-children {
+    position: relative;
+  }
+  html body .site_header .header_wrapper .menu_wrapper .menu-header-container .menu-item-has-children ul {
+    display: none;
+  }
+  html body .site_header .header_wrapper .menu_wrapper .menu-header-container .menu-item-has-children:hover ul {
+    display: block;
+    position: absolute;
+    top: 1em;
+    padding: 3em;
+    left: 0;
   }
   html body .site_header .header_wrapper .menu_wrapper.open {
     transform: translateX(0);
@@ -860,7 +880,6 @@ html body .xoo-wsc-header {
     width: -moz-fit-content;
     width: fit-content;
     height: auto;
-    background: whitesmoke;
   }
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul {
     flex-direction: row;
@@ -874,40 +893,16 @@ html body .xoo-wsc-header {
   }
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul li a {
     font-size: 1rem;
-    position: relative;
     text-decoration: none;
     color: #282828;
     font-weight: 600;
     transition: color 0.2s linear;
-    /* Sliding underline effect */
-  }
-  html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul li a:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 3px;
-    display: block;
-    margin-top: 6px;
-    right: 0;
-    background: gray;
-    transition: width 0.3s ease;
-    -webkit-transition: width 0.3s ease;
   }
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul li a:hover {
     color: gray;
   }
-  html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul li a:hover:after {
-    width: 100%;
-    left: 0;
-    background: gray;
-  }
-  html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul li.current_page_item a {
-    color: gray;
-  }
-  html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul li.current_page_item a:after {
-    width: 100%;
-    left: 0;
-    background: gray;
+  html body .site_header .header_wrapper .menu_wrapper .menu-header-container .menu-item-has-children:hover ul {
+    padding: 1em;
   }
   html body .site_header .logo-social_wrapper .logo_link img {
     width: 12em;
@@ -955,10 +950,9 @@ html body .xoo-wsc-header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1em;
   }
   html body footer .logo-social_wrapper_footer .logo_link img {
-    width: 30%;
+    width: 25%;
   }
   html body footer .copyright_wrapper {
     flex-direction: row;
