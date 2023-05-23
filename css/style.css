@@ -46,40 +46,10 @@ html body .site_header .header_wrapper .menu_wrapper .menu li {
   list-style-type: none;
 }
 html body .site_header .header_wrapper .menu_wrapper .menu li a {
-  position: relative;
-  text-decoration: none;
-  color: #282828;
   font-weight: 600;
-  transition: color 0.2s linear;
-  /* Sliding underline effect */
-}
-html body .site_header .header_wrapper .menu_wrapper .menu li a:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 3px;
-  display: block;
-  margin-top: 6px;
-  right: 0;
-  background: gray;
-  transition: width 0.3s ease;
-  -webkit-transition: width 0.3s ease;
-}
-html body .site_header .header_wrapper .menu_wrapper .menu li a:hover {
-  color: gray;
-}
-html body .site_header .header_wrapper .menu_wrapper .menu li a:hover:after {
-  width: 100%;
-  left: 0;
-  background: gray;
 }
 html body .site_header .header_wrapper .menu_wrapper .menu li.current_page_item a {
   color: gray;
-}
-html body .site_header .header_wrapper .menu_wrapper .menu li.current_page_item a:after {
-  width: 100%;
-  left: 0;
-  background: gray;
 }
 html body .site_header .header_wrapper .logo-social_wrapper {
   display: flex;
@@ -904,6 +874,40 @@ html body .xoo-wsc-header {
   }
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul li a {
     font-size: 1rem;
+    position: relative;
+    text-decoration: none;
+    color: #282828;
+    font-weight: 600;
+    transition: color 0.2s linear;
+    /* Sliding underline effect */
+  }
+  html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul li a:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    display: block;
+    margin-top: 6px;
+    right: 0;
+    background: gray;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+  }
+  html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul li a:hover {
+    color: gray;
+  }
+  html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul li a:hover:after {
+    width: 100%;
+    left: 0;
+    background: gray;
+  }
+  html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul li.current_page_item a {
+    color: gray;
+  }
+  html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul li.current_page_item a:after {
+    width: 100%;
+    left: 0;
+    background: gray;
   }
   html body .site_header .logo-social_wrapper .logo_link img {
     width: 12em;
