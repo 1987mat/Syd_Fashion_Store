@@ -5,11 +5,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     .hamburger {
       position: absolute;
-      top: 25px;
-      left: 15px;
+      top: 0;
+      left: 0;
       z-index: 20;
       width: 2.5em;
       height: 2.5em;
@@ -75,12 +76,14 @@
 
     .menu_wrapper {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      gap: 8em;
       background: white;
       position: fixed;
       height: 100vh;
-      width: 90vw;
+      width: 85vw;
       top: 0;
       left: 0;
       transform: translateX(-100%);
@@ -88,17 +91,15 @@
 
       .menu-header-container {
         ul {
-          padding: 0;
-          margin: 0;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          gap: 4em;
+          padding: 0;
+          gap: 5em;
 
           li {
             list-style-type: none;
-            margin-bottom: 3em;
 
             a {
               font-size: 2rem;
@@ -108,26 +109,61 @@
 
         /* Drodpdown submenu */
         .menu-item-has-children {
-          position: relative;
-
-          ul {
+          .sub-menu {
             display: none;
-          }
+            padding: 0;
+            margin: 2rem 0 0 1rem;
 
-          &:hover {
-            ul {
-              display: block;
-              position: absolute;
-              top: 1em;
-              padding: 3em;
-              left: 0;
+            &.open {
+              display: flex;
+              flex-direction: column;
+              align-items: start;
+              gap: 2em;
             }
           }
         }
       }
 
+      /* Slide mobile menu from left to right */
       &.open {
         transform: translateX(0);
+      }
+
+      .social_mobile_nav {
+        position: absolute;
+        bottom: 3rem;
+        display: flex;
+        gap: 1.5em;
+
+        .dashicons-instagram {
+          color: darkred;
+          font-size: 2.5rem;
+        }
+
+        .dashicons-facebook {
+          color: blue;
+          font-size: 2.5rem;
+        }
+
+        .dashicons-twitter {
+          color: lightblue;
+          font-size: 2.5rem;
+        }
+
+        .dashicons-youtube {
+          color: red;
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    .login-wrapper {
+      position: absolute;
+      left: 35px;
+      top: 0;
+
+      span {
+        font-size: 2.8rem;
       }
     }
   }

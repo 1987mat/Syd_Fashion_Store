@@ -257,20 +257,18 @@ $biggerScreen2: 2559px;
 
           .menu_wrapper {
             position: absolute;
-            left: 330px;
-            top: 40%;
+            left: 320px;
             width: fit-content;
             height: auto;
+            background: transparent;
 
             .menu-header-container {
               ul {
                 flex-direction: row;
                 gap: 2em;
-                padding: 0;
 
                 li {
-                  margin: 0;
-                  opacity: 1;
+                  padding: 1em 0 2em 0;
                   transform: translateY(0);
 
                   a {
@@ -283,14 +281,100 @@ $biggerScreen2: 2559px;
                     &:hover {
                       color: gray;
                     }
+
+                    &::after {
+                      content: '';
+                      position: absolute;
+                      width: 0;
+                      height: 5px;
+                      display: block;
+                      margin-top: 0.5rem;
+                      right: 0;
+                      background-color: #452c63;
+                      transition: width 0.4s ease;
+                      -webkit-transition: width 0.4s ease;
+                    }
+
+                    &:hover::after {
+                      width: 100%;
+                      left: 0;
+                    }
+                  }
+                }
+
+                .menu-item-has-children {
+                  position: relative;
+
+                  .sub-menu {
+                    flex-direction: column;
+                    align-items: start;
+                    position: absolute;
+                    margin: 0;
+                    gap: 0.5em;
+                    top: 4rem;
+                    left: -2rem;
+                    background-color: white;
+                    border-radius: 2px;
+                    box-shadow: 0 0 8px gray;
+                    padding: 0.5rem;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.4s ease;
+
+                    li {
+                      border-radius: 2px;
+                      padding: 0.5rem 1.5rem;
+                      width: 100%;
+                      background-color: transparent;
+                      transition: background-color 0.3s ease;
+
+                      a {
+                        padding: 0;
+                        margin: 0;
+                        color: #282828;
+                      }
+
+                      &:hover {
+                        background-color: plum;
+
+                        a::after {
+                          width: 0;
+                        }
+                      }
+                    }
+                  }
+
+                  &:hover {
+                    .sub-menu {
+                      opacity: 1;
+                      visibility: visible;
+                      display: flex;
+                    }
                   }
                 }
               }
+            }
 
-              .menu-item-has-children:hover {
-                ul {
-                  padding: 1em;
-                }
+            .social_mobile_nav {
+              display: none;
+            }
+          }
+
+          .login-wrapper {
+            left: 880px;
+            top: 20px;
+
+            span {
+              font-size: 2rem;
+              transform: scale(1);
+              transition: transform 0.3s ease;
+            }
+
+            &:hover {
+              cursor: pointer;
+
+              span {
+                transform: scale(1.05);
               }
             }
           }
@@ -299,7 +383,7 @@ $biggerScreen2: 2559px;
         .logo-social_wrapper {
           .logo_link {
             img {
-              width: 12em;
+              width: 14em;
             }
           }
         }
@@ -406,13 +490,17 @@ $biggerScreen2: 2559px;
       .site_header {
         .header_wrapper {
           .menu_wrapper {
-            left: 380px;
+            left: 360px;
 
             .menu-header-container {
               ul {
                 gap: 3em;
               }
             }
+          }
+
+          .login-wrapper {
+            left: 1130px;
           }
         }
       }
