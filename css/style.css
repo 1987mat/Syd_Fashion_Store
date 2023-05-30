@@ -2,6 +2,8 @@
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  /* Prevent any object from being highlighted upon touch event */
+  -webkit-tap-highlight-color: transparent;
 }
 
 html body {
@@ -63,6 +65,9 @@ html body .site_header .header_wrapper .logo-wrapper .logo_link {
 }
 html body a {
   color: #282828;
+}
+html body a:active, html body a:focus {
+  background-color: transparent;
 }
 html body main {
   display: flex;
@@ -598,7 +603,11 @@ html body.page-id-81 .contact_container .form_wrapper .form_container form .subm
   border-radius: 2px;
   padding: 1rem;
   width: 15em;
+  background-color: gainsboro;
   transition: background-color 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 html body.page-id-81 .contact_container .form_wrapper .form_container form .submit-container input:hover {
   cursor: pointer;
@@ -790,7 +799,6 @@ html body .xoo-wsc-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding: 0;
     gap: 5em;
   }
@@ -799,6 +807,9 @@ html body .xoo-wsc-header {
   }
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul li a {
     font-size: 2rem;
+  }
+  html body .site_header .header_wrapper .menu_wrapper .menu-header-container .menu-item-has-children a span {
+    margin-left: 3em;
   }
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container .menu-item-has-children .sub-menu {
     display: none;
@@ -810,6 +821,7 @@ html body .xoo-wsc-header {
     flex-direction: column;
     align-items: start;
     gap: 2em;
+    display: block;
   }
   html body .site_header .header_wrapper .menu_wrapper.open {
     transform: translateX(0);
@@ -996,7 +1008,7 @@ html body .xoo-wsc-header {
   }
   html body .site_header .header_wrapper .menu_wrapper {
     position: absolute;
-    left: 19rem;
+    left: 16rem;
     width: -moz-fit-content;
     width: fit-content;
     height: auto;
@@ -1176,7 +1188,7 @@ html body .xoo-wsc-header {
 }
 @media screen and (min-width: 1200px) {
   html body .site_header .header_wrapper .menu_wrapper {
-    left: 22rem;
+    left: 20rem;
   }
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul {
     gap: 3.5em;

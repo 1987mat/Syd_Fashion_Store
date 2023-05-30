@@ -100,7 +100,6 @@
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
           padding: 0;
           gap: 5em;
 
@@ -115,6 +114,12 @@
 
         /* Drodpdown submenu */
         .menu-item-has-children {
+          a {
+            span {
+              margin-left: 3em;
+            }
+          }
+
           .sub-menu {
             display: none;
             padding: 0;
@@ -125,6 +130,7 @@
               flex-direction: column;
               align-items: start;
               gap: 2em;
+              display: block;
             }
           }
         }
