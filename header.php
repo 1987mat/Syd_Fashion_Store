@@ -25,14 +25,8 @@
           <a href="" class="youtube"><span class="dashicons dashicons-youtube"></span></a>
         </div>
       </div>
-      <div class="logo-social_wrapper">
+      <div class="logo-wrapper">
         <a class="logo_link" href="<?php echo site_url('');?>" aria-label="homepage"><img src=<?php echo get_template_directory_uri() . '/images/logo.png';?> alt="logo"></a>
-        <!-- <div class="social_header">
-          <a href="" class="instagram"><span class="dashicons dashicons-instagram"></span></a>
-          <a href="" class="facebook"><span class="dashicons dashicons-facebook"></span></a>
-          <a href="" class="twitter"><span class="dashicons dashicons-twitter"></span></a>
-          <a href="" class="youtube"><span class="dashicons dashicons-youtube"></span></a>
-        </div> -->
       </div>
       <div class="login-wrapper">
         <a href=<?php echo site_url('/my-account');?> aria-label="my-account"><span class="dashicons dashicons-admin-users"></span></a>

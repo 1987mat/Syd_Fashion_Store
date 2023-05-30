@@ -54,7 +54,7 @@ $biggerScreen2: 2559px;
             flex-direction: column;
 
             img {
-              width: 80%;
+              width: 90%;
             }
           }
         }
@@ -100,6 +100,34 @@ $biggerScreen2: 2559px;
 
             .woocommerce-MyAccount-content {
               flex: auto;
+            }
+          }
+        }
+      }
+
+      /* Contact Page */
+      &.page-id-81 {
+        .form_wrapper {
+          flex-direction: column;
+          align-items: center;
+
+          .contact_image {
+            display: none;
+          }
+
+          .form_container {
+            width: 100%;
+            padding: 2em 2em;
+
+            .form-group {
+              &.top {
+                flex-direction: column;
+                gap: 0.5em;
+
+                input {
+                  width: 100%;
+                }
+              }
             }
           }
         }
@@ -206,10 +234,6 @@ $biggerScreen2: 2559px;
     body {
       .site_header {
         .header_wrapper {
-          .hamburger {
-            left: 20px;
-          }
-
           .menu_wrapper {
             .menu-header-container {
               ul {
@@ -257,7 +281,7 @@ $biggerScreen2: 2559px;
 
           .menu_wrapper {
             position: absolute;
-            left: 320px;
+            left: 19rem;
             width: fit-content;
             height: auto;
             background: transparent;
@@ -286,11 +310,11 @@ $biggerScreen2: 2559px;
                       content: '';
                       position: absolute;
                       width: 0;
-                      height: 5px;
+                      height: 4px;
                       display: block;
                       margin-top: 0.5rem;
                       right: 0;
-                      background-color: #452c63;
+                      background-color: purple;
                       transition: width 0.4s ease;
                       -webkit-transition: width 0.4s ease;
                     }
@@ -319,7 +343,7 @@ $biggerScreen2: 2559px;
                     padding: 0.5rem;
                     opacity: 0;
                     visibility: hidden;
-                    transition: opacity 0.4s ease;
+                    transition: opacity 0.9s ease;
 
                     li {
                       border-radius: 2px;
@@ -360,9 +384,17 @@ $biggerScreen2: 2559px;
             }
           }
 
+          .logo-wrapper {
+            .logo_link {
+              img {
+                width: 14em;
+              }
+            }
+          }
+
           .login-wrapper {
-            left: 880px;
-            top: 20px;
+            left: 88%;
+            top: 1rem;
 
             span {
               font-size: 2rem;
@@ -376,14 +408,6 @@ $biggerScreen2: 2559px;
               span {
                 transform: scale(1.05);
               }
-            }
-          }
-        }
-
-        .logo-social_wrapper {
-          .logo_link {
-            img {
-              width: 14em;
             }
           }
         }
@@ -454,6 +478,37 @@ $biggerScreen2: 2559px;
         }
       }
 
+      &.page-id-81 {
+        .contact_container {
+          margin-top: 8em;
+
+          .form_wrapper {
+            flex-direction: row;
+            align-items: start;
+
+            .contact_image {
+              display: flex;
+            }
+
+            .form_container {
+              width: 100%;
+              padding: 1em 3em 1em 2em;
+
+              .form-group {
+                &.top {
+                  flex-direction: row;
+                  gap: 0.5em;
+
+                  input {
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
       &.woocommerce-cart {
         .woocommerce {
           margin-top: 1em;
@@ -490,17 +545,17 @@ $biggerScreen2: 2559px;
       .site_header {
         .header_wrapper {
           .menu_wrapper {
-            left: 360px;
+            left: 22rem;
 
             .menu-header-container {
               ul {
-                gap: 3em;
+                gap: 3.5em;
               }
             }
           }
 
           .login-wrapper {
-            left: 1130px;
+            left: 90%;
           }
         }
       }
@@ -522,7 +577,7 @@ $biggerScreen2: 2559px;
       .site_header {
         .header_wrapper {
           .menu_wrapper {
-            left: 600px;
+            left: 40rem;
 
             .menu-header-container {
               ul {
@@ -562,8 +617,6 @@ $biggerScreen2: 2559px;
       .site_header {
         .header_wrapper {
           .menu_wrapper {
-            left: 800px;
-
             .menu-header-container {
               ul {
                 gap: 12em;

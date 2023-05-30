@@ -68,9 +68,15 @@
           transform: rotate(-45deg);
         }
       }
+    }
 
-      &:hover {
-        cursor: pointer;
+    .login-wrapper {
+      position: absolute;
+      left: 3rem;
+      top: 0;
+
+      span {
+        font-size: 2.8rem;
       }
     }
 
@@ -156,19 +162,9 @@
         }
       }
     }
-
-    .login-wrapper {
-      position: absolute;
-      left: 35px;
-      top: 0;
-
-      span {
-        font-size: 2.8rem;
-      }
-    }
   }
 
-  .logo-social_wrapper {
+  .logo-wrapper {
     width: 8em;
 
     .logo_link {

@@ -40,7 +40,7 @@
       }
     }
 
-    .logo-social_wrapper {
+    .logo-wrapper {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -51,38 +51,6 @@
         display: flex;
         justify-content: center;
         width: 15em;
-      }
-
-      .social_header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1em;
-
-        a {
-          text-decoration: none;
-          transition: transform 0.4s ease;
-
-          &:hover {
-            transform: scale(1.1);
-          }
-        }
-
-        .dashicons-instagram {
-          color: darkred;
-        }
-
-        .dashicons-facebook {
-          color: blue;
-        }
-
-        .dashicons-twitter {
-          color: lightblue;
-        }
-
-        .dashicons-youtube {
-          color: red;
-        }
       }
     }
   }
