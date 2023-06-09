@@ -6,6 +6,9 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html.no-scroll {
+  overflow: hidden;
+}
 html body {
   padding: 0;
   margin: 0;
@@ -774,7 +777,7 @@ html body .xoo-wsc-header {
     top: 0;
   }
   html body .site_header .header_wrapper .login-wrapper span {
-    font-size: 2.8rem;
+    font-size: 2.7rem;
   }
   html body .site_header .header_wrapper .menu_wrapper {
     display: flex;
@@ -809,7 +812,7 @@ html body .xoo-wsc-header {
     font-size: 2rem;
   }
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container .menu-item-has-children a span {
-    margin-left: 3em;
+    margin-left: 1em;
   }
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container .menu-item-has-children .sub-menu {
     display: none;
@@ -817,11 +820,12 @@ html body .xoo-wsc-header {
     margin: 2rem 0 0 1rem;
   }
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container .menu-item-has-children .sub-menu.open {
-    display: flex;
+    visibility: visible;
     flex-direction: column;
     align-items: start;
     gap: 2em;
     display: block;
+    position: static;
   }
   html body .site_header .header_wrapper .menu_wrapper.open {
     transform: translateX(0);
@@ -856,7 +860,7 @@ html body .xoo-wsc-header {
   }
   html body main .hero .heading {
     margin-top: 6em;
-    gap: 2em;
+    gap: 3em;
   }
   html body main .hero .heading h4 {
     font-size: 1.5rem;
@@ -865,7 +869,7 @@ html body .xoo-wsc-header {
     font-size: 4rem;
   }
   html body main .hero .heading a {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
   html body main .shop_sale_section {
     flex-direction: column;
@@ -1051,6 +1055,9 @@ html body .xoo-wsc-header {
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul .menu-item-has-children {
     position: relative;
   }
+  html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul .menu-item-has-children a span {
+    margin: 0;
+  }
   html body .site_header .header_wrapper .menu_wrapper .menu-header-container ul .menu-item-has-children .sub-menu {
     flex-direction: column;
     align-items: start;
@@ -1119,6 +1126,9 @@ html body .xoo-wsc-header {
   }
   html body main .hero .heading h1 {
     font-size: 7rem;
+  }
+  html body main .hero .heading a {
+    font-size: 1.25rem;
   }
   html body main .shop_sale_section {
     flex-direction: initial;

@@ -76,7 +76,7 @@
       top: 0;
 
       span {
-        font-size: 2.8rem;
+        font-size: 2.7rem;
       }
     }
 
@@ -116,7 +116,7 @@
         .menu-item-has-children {
           a {
             span {
-              margin-left: 3em;
+              margin-left: 1em;
             }
           }
 
@@ -126,11 +126,12 @@
             margin: 2rem 0 0 1rem;
 
             &.open {
-              display: flex;
+              visibility: visible;
               flex-direction: column;
               align-items: start;
               gap: 2em;
               display: block;
+              position: static;
             }
           }
         }
