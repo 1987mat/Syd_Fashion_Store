@@ -15,6 +15,7 @@ class MobileMenu {
     this.hamburger.addEventListener('click', () => {
       this.mobileMenu.classList.toggle('open');
       this.hamburger.classList.toggle('active');
+      // No scrolling background when mobile menu is open
       document.documentElement.classList.toggle('no-scroll');
     });
 

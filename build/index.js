@@ -23,6 +23,7 @@ class MobileMenu {
     this.hamburger.addEventListener('click', () => {
       this.mobileMenu.classList.toggle('open');
       this.hamburger.classList.toggle('active');
+      // No scrolling background when mobile menu is open
       document.documentElement.classList.toggle('no-scroll');
     });
 
@@ -81,15 +82,13 @@ function hideNavbar() {
   const header = document.querySelector('.site_header');
   const headerHeight = header.clientHeight;
   window.addEventListener('scroll', () => {
-    if (window.innerWidth >= 992) {
-      let currentScroll = window.scrollY;
-      if (currentScroll > previousScroll && currentScroll > headerHeight) {
-        header.classList.add('hide');
-      } else {
-        header.classList.remove('hide');
-      }
-      previousScroll = currentScroll;
+    let currentScroll = window.scrollY;
+    if (currentScroll > previousScroll && currentScroll > headerHeight) {
+      header.classList.add('hide');
+    } else {
+      header.classList.remove('hide');
     }
+    previousScroll = currentScroll;
   });
 }
 
@@ -164,9 +163,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_modules_navbarScroll__WEBPACK_IMPORTED_MODULE_0__.hideNavbar)();
-(0,_modules_animationOnScroll__WEBPACK_IMPORTED_MODULE_1__.animationOnScroll)();
-const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_2__["default"]();
+jQuery(document).ready(() => {
+  (0,_modules_navbarScroll__WEBPACK_IMPORTED_MODULE_0__.hideNavbar)();
+  (0,_modules_animationOnScroll__WEBPACK_IMPORTED_MODULE_1__.animationOnScroll)();
+  const mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_2__["default"]();
+});
 }();
 /******/ })()
 ;
