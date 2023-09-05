@@ -26,6 +26,11 @@
       }
 
       .products {
+        margin: 0 0 1em;
+        padding: 0;
+        list-style: none outside;
+        clear: both;
+
         li {
           display: flex;
           flex-direction: column;
@@ -58,7 +63,7 @@
             }
           }
 
-          .wp-element-button {
+          .add_to_cart_button {
             background-color: whitesmoke;
             padding: 0.8em;
             border-radius: 2px;

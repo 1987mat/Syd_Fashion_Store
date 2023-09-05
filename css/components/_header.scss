@@ -29,11 +29,12 @@
 
           a {
             font-weight: 600;
+            color: wheat;
           }
 
           &.current_page_item {
             a {
-              color: gray;
+              color: #484848;
             }
           }
         }
